@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUXE | Architectural Masterpieces & Premium Real Estate</title>
+    <meta name="description" content="Discover extraordinary living with LUXE. We build premium, sustainable, and architecturally significant residences for the discerning few.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header id="main-nav">
+        <div class="container nav-wrapper">
+            <div class="logo">
+                <a href="#hero">LUXE<span>.</span></a>
+            </div>
+            <nav id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#stats">Performance</a></li>
+                    <li><a href="#location">Locations</a></li>
+                    <li><a href="#about">The Builder</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a href="#" class="btn btn-outline hide-mobile">Enquire Now</a>
+                <div class="menu-toggle" id="mobile-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="hero" class="hero-slider">
+            <div class="slides-container">
+                <div class="slide active" style="background-image: url('assets/hero1.png');">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content container">
+                        <span class="badge">Exclusive Collection</span>
+                        <h1>Unparalleled Architectural <br>Masterpieces</h1>
+                        <p>Experience the pinnacle of luxury living in our meticulously crafted residences designed for the modern visionary.</p>
+                        <div class="hero-btns">
+                            <a href="#gallery" class="btn btn-primary">View Collection</a>
+                            <a href="#location" class="btn btn-secondary">Explore Locations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('assets/hero2.png');">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content container">
+                        <span class="badge">Urban Sophistication</span>
+                        <h1>Skyline Elegance & <br>Curated Spaces</h1>
+                        <p>Modern penthouses featuring floor-to-ceiling glass, breathtaking vistas, and interior designs that redefine urban living.</p>
+                        <div class="hero-btns">
+                            <a href="#gallery" class="btn btn-primary">View Collection</a>
+                            <a href="#location" class="btn btn-secondary">Explore Locations</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url('assets/hero3.png');">
+                    <div class="slide-overlay"></div>
+                    <div class="slide-content container">
+                        <span class="badge">Sustainable Luxury</span>
+                        <h1>Nature Integrated <br>Residences</h1>
+                        <p>Where architectural brilliance meets ecological responsibility. Discover our award-winning sustainable villas.</p>
+                        <div class="hero-btns">
+                            <a href="#gallery" class="btn btn-primary">View Collection</a>
+                            <a href="#location" class="btn btn-secondary">Explore Locations</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls hide-mobile">
+                <div class="control-prev"><i class="fas fa-chevron-left"></i></div>
+                <div class="control-next"><i class="fas fa-chevron-right"></i></div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active" data-index="0"></span>
+                <span class="dot" data-index="1"></span>
+                <span class="dot" data-index="2"></span>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse"></div>
+                <span>Scroll to Explore</span>
+            </div>
+        </section>
+
+        <!-- 2. Certification Section -->
+        <section id="certifications" class="section-padding">
+            <div class="container text-center">
+                <h3 class="section-subtitle">Commitment to Quality</h3>
+                <h2 class="section-title">World-Class Accreditations</h2>
+                <div class="cert-grid">
+                    <div class="cert-item" data-reveal>
+                        <div class="cert-icon"><i class="fas fa-award"></i></div>
+                        <h4>ISO 9001:2015</h4>
+                        <p>Quality Management System</p>
+                    </div>
+                    <div class="cert-item" data-reveal>
+                        <div class="cert-icon"><i class="fas fa-leaf"></i></div>
+                        <h4>LEED Gold</h4>
+                        <p>Sustainable Construction</p>
+                    </div>
+                    <div class="cert-item" data-reveal>
+                        <div class="cert-icon"><i class="fas fa-shield-halved"></i></div>
+                        <h4>RERA Certified</h4>
+                        <p>Trusted & Transparent</p>
+                    </div>
+                    <div class="cert-item" data-reveal>
+                        <div class="cert-icon"><i class="fas fa-building-circle-check"></i></div>
+                        <h4>BREEAM Rated</h4>
+                        <p>Environmental Assessment</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Stats Section -->
+        <section id="stats" class="section-padding bg-light">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card" data-reveal>
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">Years of Excellence</span>
+                    </div>
+                    <div class="stat-card" data-reveal>
+                        <span class="stat-number" data-target="1200">0</span>
+                        <span class="stat-label">Premium Units Delivered</span>
+                    </div>
+                    <div class="stat-card" data-reveal>
+                        <span class="stat-number" data-target="45">0</span>
+                        <span class="stat-label">Industry Awards</span>
+                    </div>
+                    <div class="stat-card" data-reveal>
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-label">Iconic Projects</span>
+                    </div>
+                    <div class="stat-card" data-reveal>
+                        <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
+                        <span class="stat-label">Client Satisfaction</span>
+                    </div>
+                    <div class="stat-card" data-reveal>
+                        <span class="stat-number" data-target="250">0</span><span class="stat-suffix">M+</span>
+                        <span class="stat-label">Sq. Ft. Constructed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Location Section -->
+        <section id="location" class="section-padding">
+            <div class="container">
+                <div class="text-center mb-60">
+                    <h3 class="section-subtitle">Strategic Presence</h3>
+                    <h2 class="section-title">Global Footprint & Iconic Sites</h2>
+                </div>
+                <div class="location-showcase">
+                    <div class="location-visual-wrapper">
+                        <div class="spotlight-frame">
+                            <div id="project-spotlight" class="spotlight-img" style="background-image: url('assets/hero3.png');">
+                                <div class="spotlight-overlay">
+                                    <div class="spotlight-content">
+                                        <span class="coord-tag">45.523° N, 122.676° W</span>
+                                        <h3 id="spotlight-title">Azure Bay Villas</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-cards-grid">
+                        <div class="project-card" data-location="Azure Bay">
+                            <div class="project-img" style="background-image: url('assets/hero3.png');"></div>
+                            <div class="project-info">
+                                <h4>Azure Bay Villas</h4>
+                                <p><strong>Location:</strong> Malibu Coast, CA</p>
+                                <a href="https://maps.google.com/?q=Malibu+Coast" target="_blank" class="btn-text">View on Map <i class="fas fa-location-dot"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card" data-location="Emerald Hills">
+                            <div class="project-img" style="background-image: url('assets/hero1.png');"></div>
+                            <div class="project-info">
+                                <h4>Emerald Residences</h4>
+                                <p><strong>Location:</strong> Swiss Alps, Zermatt</p>
+                                <a href="https://maps.google.com/?q=Zermatt+Switzerland" target="_blank" class="btn-text">View on Map <i class="fas fa-location-dot"></i></a>
+                            </div>
+                        </div>
+                        <div class="project-card" data-location="CBD">
+                            <div class="project-img" style="background-image: url('assets/hero2.png');"></div>
+                            <div class="project-info">
+                                <h4>The Sterling Tower</h4>
+                                <p><strong>Location:</strong> Manhattan, NY</p>
+                                <a href="https://maps.google.com/?q=Manhattan+NY" target="_blank" class="btn-text">View on Map <i class="fas fa-location-dot"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. About Builder -->
+        <section id="about" class="section-padding">
+            <div class="container flex-split reverse">
+                <div class="split-text" data-reveal>
+                    <h3 class="section-subtitle">The Visionary</h3>
+                    <h2 class="section-title">Meet David Sterling</h2>
+                    <p>With a legacy spanning two decades, David Sterling has been at the forefront of luxury real estate development. His philosophy is simple: build what will stand for centuries.</p>
+                    <p>Under his leadership, LUXE has transformed from a boutique design house into a global benchmark for architectural excellence and sustainable development.</p>
+                    <div class="signature">
+                        <span class="signature-text">David Sterling</span>
+                        <p>CEO & Lead Architect</p>
+                    </div>
+                </div>
+                <div class="split-visual" data-reveal>
+                    <div class="builder-image-wrapper">
+                        <img src="assets/builder.png" alt="David Sterling" class="builder-img">
+                        <div class="builder-frame"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Why Choose Us -->
+        <section id="why-us" class="section-padding bg-platinum">
+            <div class="container">
+                <div class="text-center mb-60">
+                    <h3 class="section-subtitle">The LUXE Difference</h3>
+                    <h2 class="section-title">Engineered for Excellence</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" data-reveal>
+                        <div class="feature-icon"><i class="fas fa-gem"></i></div>
+                        <h3>Timeless Design</h3>
+                        <p>Architectural aesthetics that transcend trends, blending classical elegance with modern functionality.</p>
+                    </div>
+                    <div class="feature-card" data-reveal>
+                        <div class="feature-icon"><i class="fas fa-handshake-angle"></i></div>
+                        <h3>Concierge Services</h3>
+                        <p>24/7 personalized assistance for our residents, from travel bookings to bespoke event planning.</p>
+                    </div>
+                    <div class="feature-card" data-reveal>
+                        <div class="feature-icon"><i class="fas fa-microchip"></i></div>
+                        <h3>Smart Ecosystem</h3>
+                        <p>Fully integrated home automation systems controlled seamlessly via your personal devices.</p>
+                    </div>
+                    <div class="feature-card" data-reveal>
+                        <div class="feature-icon"><i class="fas fa-key"></i></div>
+                        <h3>Asset Security</h3>
+                        <p>State-of-the-art biometric security and professional surveillance ensuring absolute peace of mind.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6.5 Nearest Facilities (New Section) -->
+        <section id="facilities" class="section-padding">
+            <div class="container">
+                <div class="text-center mb-60">
+                    <h3 class="section-subtitle">Curated Convenience</h3>
+                    <h2 class="section-title">The LUXE Neighborhood</h2>
+                </div>
+                <div class="facilities-grid">
+                    <div class="facility-card" data-reveal>
+                        <div class="facility-img" style="background-image: url('assets/hero2.png');">
+                            <div class="facility-icon-overlay"><i class="fas fa-plane-up"></i></div>
+                        </div>
+                        <div class="facility-info">
+                            <h4>Private Jet Terminal</h4>
+                            <p>Exclusive 15-minute access to regional jet terminals for seamless global travel.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card" data-reveal>
+                        <div class="facility-img" style="background-image: url('assets/gallery1.png');">
+                            <div class="facility-icon-overlay"><i class="fas fa-utensils"></i></div>
+                        </div>
+                        <div class="facility-info">
+                            <h4>Michelin Star Dining</h4>
+                            <p>Priority reservations at the world's most acclaimed culinary destinations within reach.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card" data-reveal>
+                        <div class="facility-img" style="background-image: url('assets/hero1.png');">
+                            <div class="facility-icon-overlay"><i class="fas fa-spa"></i></div>
+                        </div>
+                        <div class="facility-info">
+                            <h4>Signature Wellness</h4>
+                            <p>Integrated partnerships with elite spa and longevity centers for your well-being.</p>
+                        </div>
+                    </div>
+                    <div class="facility-card" data-reveal>
+                        <div class="facility-img" style="background-image: url('assets/hero3.png');">
+                            <div class="facility-icon-overlay"><i class="fas fa-helicopter"></i></div>
+                        </div>
+                        <div class="facility-info">
+                            <h4>Helipad Access</h4>
+                            <p>Private helipads at all locations for rapid transit between city and sanctuary.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Gallery Section -->
+        <section id="gallery" class="section-padding">
+            <div class="container">
+                <div class="text-center mb-60">
+                    <h3 class="section-subtitle">Visual Journey</h3>
+                    <h2 class="section-title">The Gallery of Grandeur</h2>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item large" style="background-image: url('assets/gallery1.png');" data-reveal>
+                        <div class="gallery-overlay"><span>The Grand Foyer</span></div>
+                    </div>
+                    <div class="gallery-item" style="background-image: url('assets/gallery2.png');" data-reveal>
+                        <div class="gallery-overlay"><span>Master Suite</span></div>
+                    </div>
+                    <div class="gallery-item" style="background-image: url('assets/hero2.png');" data-reveal>
+                        <div class="gallery-overlay"><span>Penthouse Lounge</span></div>
+                    </div>
+                    <div class="gallery-item" style="background-image: url('assets/hero1.png');" data-reveal>
+                        <div class="gallery-overlay"><span>Infinity Pool</span></div>
+                    </div>
+                    <div class="gallery-item" style="background-image: url('assets/hero3.png');" data-reveal>
+                        <div class="gallery-overlay"><span>Terrace Garden</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Download Portfolio -->
+        <section id="download" class="cta-section">
+            <div class="container text-center">
+                <div class="cta-box">
+                    <h2 data-reveal>Own the Complete Brochure</h2>
+                    <p data-reveal>Get detailed floor plans, specification sheets, and a complete lookbook of our upcoming projects.</p>
+                    <a href="#" class="btn btn-primary btn-large" data-reveal><i class="fas fa-file-pdf"></i> Download Portfolio PDF</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. Testimonials -->
+        <section id="testimonials" class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-60">
+                    <h3 class="section-subtitle">Voices of Trust</h3>
+                    <h2 class="section-title">Client Experiences</h2>
+                </div>
+                <div class="testimonial-container">
+                    <div class="testimonial-slider-track">
+                        <div class="testimonial-card active">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>"LUXE doesn't just build houses; they craft legacies. The attention to detail in our villa is something I haven't seen in three decades of property investment."</p>
+                            <div class="testimonial-author">
+                                <h4>Alexander Rothschild</h4>
+                                <span>Venture Capitalist</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>"The level of concierge service and smart integration in the Sterling Tower is unmatched. It feels like living in the future, today."</p>
+                            <div class="testimonial-author">
+                                <h4>Elena Vance</h4>
+                                <span>Tech Entrepreneur</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+                            <p>"Sustainability was our priority, and Emerald Residences delivered beyond expectation without compromising a single luxury amenity."</p>
+                            <div class="testimonial-author">
+                                <h4>Marcus Thorne</h4>
+                                <span>Environmental Architect</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-nav">
+                        <span class="t-dot active" data-index="0"></span>
+                        <span class="t-dot" data-index="1"></span>
+                        <span class="t-dot" data-index="2"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. Associated Partners -->
+        <section id="partners" class="section-padding bg-light">
+            <div class="container text-center">
+                <h3 class="section-subtitle">Collaborations</h3>
+                <h2 class="section-title">Global Partners</h2>
+                <div class="partner-logos">
+                    <div class="partner-track">
+                        <div class="partner-logo"><span>AURUM</span></div>
+                        <div class="partner-logo"><span>STERLING</span></div>
+                        <div class="partner-logo"><span>VERIDIAN</span></div>
+                        <div class="partner-logo"><span>MARBLE & CO</span></div>
+                        <div class="partner-logo"><span>NEXUS</span></div>
+                        <div class="partner-logo"><span>AURUM</span></div>
+                        <div class="partner-logo"><span>STERLING</span></div>
+                        <div class="partner-logo"><span>VERIDIAN</span></div>
+                        <div class="partner-logo"><span>MARBLE & CO</span></div>
+                        <div class="partner-logo"><span>NEXUS</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">LUXE<span>.</span></div>
+                    <p>Crafting architectural legacies since 2008. Dedicated to the pursuit of absolute perfection in every square foot.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="#">Properties</a></li>
+                        <li><a href="#">Locations</a></li>
+                        <li><a href="#">Virtual Tours</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Awards</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> concierge@luxe.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (800) 555-LUXE</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUXE Global Realty. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
