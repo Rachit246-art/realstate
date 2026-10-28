@@ -2,454 +2,1065 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LUXE | Architectural Masterpieces & Premium Real Estate</title>
-    <meta name="description" content="Discover extraordinary living with LUXE. We build premium, sustainable, and architecturally significant residences for the discerning few.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>SOBHA SEAS | Spaces That Elevate Your Everyday</title>
+    <meta name="description" content="Discover thoughtfully planned residential developments designed for timeless living. Curated communities, modern architectural elegance, and luxury residences.">
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Alex+Brush&display=swap" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <header id="main-nav">
-        <div class="container nav-wrapper">
-            <div class="logo">
-                <a href="#hero">LUXE<span>.</span></a>
+    <!-- Toast Notification Banner -->
+    <div id="toastNotification" class="toast-popup">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <div class="toast-content">
+            <h5 id="toastTitle">Notification</h5>
+            <p id="toastMessage">Action completed successfully.</p>
+        </div>
+    </div>
+
+    <!-- Mobile Offcanvas Menu Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer">
+        <div class="drawer-header">
+            <div class="brand-logo dark">
+                <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                <span class="brand-text">SOBHA SEAS</span>
             </div>
-            <nav id="nav-menu">
+            <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <ul class="drawer-links">
+                <li><a href="index.html" class="drawer-nav-item active"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html" class="drawer-nav-item"><i class="fa-solid fa-compass"></i> About Us</a></li>
+                <li><a href="properties.html" class="drawer-nav-item"><i class="fa-solid fa-building"></i> Featured Homes</a></li>
+                <li><a href="lifestyle.html" class="drawer-nav-item"><i class="fa-solid fa-tree"></i> Lifestyle & Amenities</a></li>
+                <li><a href="contact.html" class="drawer-nav-item"><i class="fa-solid fa-phone"></i> Contact</a></li>
+            </ul>
+            <div class="drawer-footer">
+                <button class="btn btn-drawer-cta open-inquiry-btn">Schedule Private Visit</button>
+                <p class="drawer-contact-line"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            </div>
+        </div>
+    </div>
+    <div id="drawerOverlay" class="drawer-overlay"></div>
+
+    <!-- Top Announcement Bar / Header Navigation -->
+    <header id="main-nav" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                <span class="brand-text">SOBHA SEAS</span>
+            </a>
+            <nav class="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#stats">Performance</a></li>
-                    <li><a href="#location">Locations</a></li>
-                    <li><a href="#about">The Builder</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="lifestyle.html">Lifestyle</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-            <div class="nav-right">
-                <a href="#" class="btn btn-outline hide-mobile">Enquire Now</a>
-                <div class="menu-toggle" id="mobile-toggle">
+            <div class="nav-actions">
+                <button class="btn btn-nav open-inquiry-btn">Enquire Now <i class="fa-solid fa-arrow-right"></i></button>
+                <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </div>
     </header>
 
     <main>
-        <!-- 1. Hero Section -->
-        <section id="hero" class="hero-slider">
-            <div class="slides-container">
-                <div class="slide active" style="background-image: url('assets/hero1.png');">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-content container">
-                        <span class="badge">Exclusive Collection</span>
-                        <h1>Unparalleled Architectural <br>Masterpieces</h1>
-                        <p>Experience the pinnacle of luxury living in our meticulously crafted residences designed for the modern visionary.</p>
-                        <div class="hero-btns">
-                            <a href="#gallery" class="btn btn-primary">View Collection</a>
-                            <a href="#location" class="btn btn-secondary">Explore Locations</a>
-                        </div>
+        <!-- 1. HERO SECTION -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg" style="background-image: url('assets/hero_villa.jpg');"></div>
+            <div class="hero-gradient-overlay"></div>
+            
+            <div class="hero-container">
+                <div class="hero-left-content" data-reveal="fade-up">
+                    <div class="hero-tagline">
+                        <span class="tag-dot"></span>
+                        <span>DISCOVER / SPACES DESIGNED FOR YOU</span>
+                    </div>
+                    <h1 class="hero-headline">
+                        Spaces<br>
+                        That Elevate<br>
+                        Your Everyday
+                    </h1>
+                    <p class="hero-subtext">
+                        Discover thoughtfully designed residences that blend modern luxury with lasting comfort, crafted to make every day extraordinary.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#properties" class="btn btn-dark-pill">
+                            <span>EXPLORE PROPERTIES</span>
+                            <i class="fa-solid fa-arrow-down-long"></i>
+                        </a>
+                        <button class="btn-watch-tour" id="watchTourBtn">
+                            <span class="play-icon-circle"><i class="fa-solid fa-play"></i></span>
+                            <span>Watch Our Story</span>
+                        </button>
                     </div>
                 </div>
-                <div class="slide" style="background-image: url('assets/hero2.png');">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-content container">
-                        <span class="badge">Urban Sophistication</span>
-                        <h1>Skyline Elegance & <br>Curated Spaces</h1>
-                        <p>Modern penthouses featuring floor-to-ceiling glass, breathtaking vistas, and interior designs that redefine urban living.</p>
-                        <div class="hero-btns">
-                            <a href="#gallery" class="btn btn-primary">View Collection</a>
-                            <a href="#location" class="btn btn-secondary">Explore Locations</a>
-                        </div>
+
+                <!-- Floating Hero Card Right -->
+                <div class="hero-floating-card" data-reveal="fade-left">
+                    <div class="card-thumb" style="background-image: url('assets/gallery1.png');"></div>
+                    <div class="card-info">
+                        <h4>Grand Living Residence</h4>
+                        <p><i class="fa-solid fa-location-dot"></i> Palm Beach, California</p>
                     </div>
-                </div>
-                <div class="slide" style="background-image: url('assets/hero3.png');">
-                    <div class="slide-overlay"></div>
-                    <div class="slide-content container">
-                        <span class="badge">Sustainable Luxury</span>
-                        <h1>Nature Integrated <br>Residences</h1>
-                        <p>Where architectural brilliance meets ecological responsibility. Discover our award-winning sustainable villas.</p>
-                        <div class="hero-btns">
-                            <a href="#gallery" class="btn btn-primary">View Collection</a>
-                            <a href="#location" class="btn btn-secondary">Explore Locations</a>
-                        </div>
-                    </div>
+                    <button class="card-arrow quick-view-btn" data-prop="The Cove Residences" aria-label="View property details">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
             </div>
-            <div class="slider-controls hide-mobile">
-                <div class="control-prev"><i class="fas fa-chevron-left"></i></div>
-                <div class="control-next"><i class="fas fa-chevron-right"></i></div>
-            </div>
-            <div class="slider-dots">
-                <span class="dot active" data-index="0"></span>
-                <span class="dot" data-index="1"></span>
-                <span class="dot" data-index="2"></span>
-            </div>
-            <div class="scroll-indicator">
-                <div class="mouse"></div>
-                <span>Scroll to Explore</span>
+
+            <!-- SEARCH FILTER BAR (Floating over Hero bottom) -->
+            <div class="hero-search-wrapper" data-reveal="fade-up">
+                <div class="search-box-card">
+                    <div class="search-tabs">
+                        <button class="search-tab active" data-type="buy">Buy</button>
+                        <button class="search-tab" data-type="rent">Rent</button>
+                        <button class="search-tab" data-type="lease">Lease</button>
+                    </div>
+                    <form id="searchPropertiesForm" class="search-form-row">
+                        <div class="form-group-item">
+                            <label><i class="fa-solid fa-location-dot"></i> Location</label>
+                            <input type="text" id="searchLocationInput" placeholder="Search city, locality or project" value="Beverly Hills, California">
+                        </div>
+                        <div class="divider-v"></div>
+                        <div class="form-group-item">
+                            <label><i class="fa-solid fa-building"></i> Property Type</label>
+                            <select id="searchTypeSelect">
+                                <option value="all">Select Type</option>
+                                <option value="villas" selected>Luxury Villas</option>
+                                <option value="penthouse">Sky Penthouses</option>
+                                <option value="mansions">Modern Mansions</option>
+                            </select>
+                        </div>
+                        <div class="divider-v"></div>
+                        <div class="form-group-item">
+                            <label><i class="fa-solid fa-tag"></i> Price Range</label>
+                            <select id="searchPriceSelect">
+                                <option value="all">Select Scope</option>
+                                <option value="3-5" selected>$2.5M - $5.0M</option>
+                                <option value="6-10">$5.0M - $10.0M</option>
+                                <option value="10+">$10.0M+</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="search-submit-btn" aria-label="Search properties">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Stats summary right pill -->
+                <div class="hero-stats-row">
+                    <div class="stat-pill-item">
+                        <span class="pill-number" data-target="1200">1,200+</span>
+                        <span class="pill-label">Premium Properties</span>
+                    </div>
+                    <div class="stat-pill-item">
+                        <span class="pill-number" data-target="25">25+</span>
+                        <span class="pill-label">Prime Locations</span>
+                    </div>
+                    <div class="stat-pill-item">
+                        <span class="pill-number" data-target="10">10k+</span>
+                        <span class="pill-label">Happy Families</span>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- 2. Certification Section -->
-        <section id="certifications" class="section-padding">
-            <div class="container text-center">
-                <h3 class="section-subtitle">Commitment to Quality</h3>
-                <h2 class="section-title">World-Class Accreditations</h2>
-                <div class="cert-grid">
-                    <div class="cert-item" data-reveal>
-                        <div class="cert-icon"><i class="fas fa-award"></i></div>
-                        <h4>ISO 9001:2015</h4>
-                        <p>Quality Management System</p>
+        <!-- 2. VALUE PILLARS STRIP -->
+        <section class="value-pillars-section">
+            <div class="container pillars-grid">
+                <div class="pillar-card" data-reveal="fade-up" data-delay="100">
+                    <div class="pillar-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <div class="pillar-text">
+                        <h4>Prime Locations</h4>
+                        <p>Well-connected addresses that save time and keep you in the center of life.</p>
                     </div>
-                    <div class="cert-item" data-reveal>
-                        <div class="cert-icon"><i class="fas fa-leaf"></i></div>
-                        <h4>LEED Gold</h4>
-                        <p>Sustainable Construction</p>
+                </div>
+                <div class="pillar-card" data-reveal="fade-up" data-delay="200">
+                    <div class="pillar-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <div class="pillar-text">
+                        <h4>Modern Architecture</h4>
+                        <p>Designed for aesthetics and maximum day-to-day functionality.</p>
                     </div>
-                    <div class="cert-item" data-reveal>
-                        <div class="cert-icon"><i class="fas fa-shield-halved"></i></div>
-                        <h4>RERA Certified</h4>
-                        <p>Trusted & Transparent</p>
+                </div>
+                <div class="pillar-card" data-reveal="fade-up" data-delay="300">
+                    <div class="pillar-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="pillar-text">
+                        <h4>Trusted Developers</h4>
+                        <p>Decades of excellence delivering unmatched peace of mind.</p>
                     </div>
-                    <div class="cert-item" data-reveal>
-                        <div class="cert-icon"><i class="fas fa-building-circle-check"></i></div>
-                        <h4>BREEAM Rated</h4>
-                        <p>Environmental Assessment</p>
+                </div>
+                <div class="pillar-card" data-reveal="fade-up" data-delay="400">
+                    <div class="pillar-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="pillar-text">
+                        <h4>End-to-End Support</h4>
+                        <p>From tours to documentation, we walk every step beside you.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 3. Stats Section -->
-        <section id="stats" class="section-padding bg-light">
+        <!-- 3. ABOUT & PERSPECTIVE SPLIT SECTION -->
+        <section id="about" class="about-section">
+            <div class="container about-dual-grid">
+                <!-- Left Dark Visual Card -->
+                <div class="perspective-card" data-reveal="fade-right">
+                    <div class="perspective-img-bg" style="background-image: url('assets/hero2.png');"></div>
+                    <div class="perspective-overlay"></div>
+                    <div class="perspective-content">
+                        <h2>A New<br>Perspective<br>on Living</h2>
+                        <p>We believe a home is more than a space — it’s a foundation for a better life. Our mission is to seamlessly combine modern design, sustainable craftsmanship, and vibrant communities.</p>
+                        <a href="#lifestyle" class="btn-read-more">
+                            <span>READ MORE</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="perspective-footer-stat">
+                        <span class="f-num">08+</span>
+                        <span class="f-txt">Years of Architectural Distinction</span>
+                    </div>
+                </div>
+
+                <!-- Right Content & Founder's Statement -->
+                <div class="communities-card" data-reveal="fade-left">
+                    <span class="sub-label">ABOUT US</span>
+                    <h2 class="section-heading">Designing Communities for a Brighter Tomorrow</h2>
+                    <p class="about-desc">
+                        With a perfect blend of innovation, sustainability, and intuitive design, we create spaces that inspire and enrich lives. Every premium residence we integrate revitalizes our focus in delivery on quality, trust, and long-term value.
+                    </p>
+                    
+                    <div class="founder-block">
+                        <div class="signature-line">
+                            <span class="founder-sig">David Sterling</span>
+                        </div>
+                        <div class="founder-info">
+                            <h5>David Sterling</h5>
+                            <span>Founder & CEO</span>
+                        </div>
+                    </div>
+
+                    <div class="stats-counter-strip">
+                        <div class="stat-unit">
+                            <span class="stat-big-number" data-target="16">16+</span>
+                            <span class="stat-unit-label">Years of Excellence</span>
+                        </div>
+                        <div class="stat-unit">
+                            <span class="stat-big-number" data-target="50">50+</span>
+                            <span class="stat-unit-label">Landmark Projects</span>
+                        </div>
+                        <div class="stat-unit">
+                            <span class="stat-big-number" data-target="10">10k+</span>
+                            <span class="stat-unit-label">Happy Residents</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CURATED HOMES FOR EVERY LIFESTYLE (SLIDER & FILTERABLE TABS) -->
+        <section id="properties" class="properties-section">
             <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-card" data-reveal>
-                        <span class="stat-number" data-target="15">0</span>
-                        <span class="stat-label">Years of Excellence</span>
+                <div class="section-header-flex">
+                    <div class="header-left" data-reveal="fade-up">
+                        <span class="sub-label">FEATURED PROPERTIES</span>
+                        <h2 class="section-heading">Curated Homes for<br>Every Lifestyle</h2>
+                        <p class="section-sub-copy">Explore our carefully selected portfolio of exclusive residences across prime locations.</p>
                     </div>
-                    <div class="stat-card" data-reveal>
-                        <span class="stat-number" data-target="1200">0</span>
-                        <span class="stat-label">Premium Units Delivered</span>
-                    </div>
-                    <div class="stat-card" data-reveal>
-                        <span class="stat-number" data-target="45">0</span>
-                        <span class="stat-label">Industry Awards</span>
-                    </div>
-                    <div class="stat-card" data-reveal>
-                        <span class="stat-number" data-target="8">0</span>
-                        <span class="stat-label">Iconic Projects</span>
-                    </div>
-                    <div class="stat-card" data-reveal>
-                        <span class="stat-number" data-target="98">0</span><span class="stat-suffix">%</span>
-                        <span class="stat-label">Client Satisfaction</span>
-                    </div>
-                    <div class="stat-card" data-reveal>
-                        <span class="stat-number" data-target="250">0</span><span class="stat-suffix">M+</span>
-                        <span class="stat-label">Sq. Ft. Constructed</span>
+                    <div class="header-right" data-reveal="fade-up">
+                        <button class="view-all-link open-inquiry-btn">VIEW ALL PROPERTIES <i class="fa-solid fa-arrow-right"></i></button>
+                        <div class="carousel-nav-arrows">
+                            <button class="c-arrow prev" id="propPrev" aria-label="Previous properties"><i class="fa-solid fa-chevron-left"></i></button>
+                            <button class="c-arrow next" id="propNext" aria-label="Next properties"><i class="fa-solid fa-chevron-right"></i></button>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- 4. Location Section -->
-        <section id="location" class="section-padding">
-            <div class="container">
-                <div class="text-center mb-60">
-                    <h3 class="section-subtitle">Strategic Presence</h3>
-                    <h2 class="section-title">Global Footprint & Iconic Sites</h2>
+                <!-- Property Filter Tags -->
+                <div class="property-filter-tags" data-reveal="fade-up">
+                    <button class="prop-filter-btn active" data-filter="all">All Residences</button>
+                    <button class="prop-filter-btn" data-filter="villas">Villas</button>
+                    <button class="prop-filter-btn" data-filter="penthouse">Penthouses</button>
+                    <button class="prop-filter-btn" data-filter="ready">Ready to Move</button>
                 </div>
-                <div class="location-showcase">
-                    <div class="location-visual-wrapper">
-                        <div class="spotlight-frame">
-                            <div id="project-spotlight" class="spotlight-img" style="background-image: url('assets/hero3.png');">
-                                <div class="spotlight-overlay">
-                                    <div class="spotlight-content">
-                                        <span class="coord-tag">45.523° N, 122.676° W</span>
-                                        <h3 id="spotlight-title">Azure Bay Villas</h3>
+
+                <!-- Property Cards Slider Track Container -->
+                <div class="property-carousel-viewport">
+                    <div class="property-cards-slider" id="propertyCardsContainer">
+                        <!-- Property 1 -->
+                        <div class="property-card" data-category="villas ready" data-title="The Cove Residences" data-price="₹ 5.8 Cr*" data-location="Sector 54, Golf Course Road" data-beds="4 Beds" data-baths="4 Baths" data-area="3,500 Sq.Ft" data-img="assets/the_residences.jpg" data-reveal="fade-up" data-delay="100">
+                            <div class="card-media">
+                                <div class="card-img" style="background-image: url('assets/the_residences.jpg');"></div>
+                                <span class="status-pill green">READY TO MOVE</span>
+                                <button class="fav-btn" aria-label="Save property"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="prop-title">The Cove Residences</h3>
+                                <p class="prop-address"><i class="fa-solid fa-location-dot"></i> Sector 54, Golf Course Road</p>
+                                <div class="prop-specs">
+                                    <span><i class="fa-solid fa-bed"></i> 4 Beds</span>
+                                    <span class="spec-dot">•</span>
+                                    <span><i class="fa-solid fa-bath"></i> 4 Baths</span>
+                                    <span class="spec-dot">•</span>
+                                    <span><i class="fa-solid fa-vector-square"></i> 3,500 Sq.Ft</span>
+                                </div>
+                                <div class="prop-footer">
+                                    <div class="price-box">
+                                        <span class="price-val">₹ 5.8 Cr*</span>
                                     </div>
+                                    <button class="card-action-sq quick-prop-btn" aria-label="View property details"><i class="fa-solid fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 2 -->
+                        <div class="property-card" data-category="penthouse" data-title="Skyline Heights" data-price="₹ 3.4 Cr*" data-location="Central Avenue, CBD" data-beds="3 Beds" data-baths="3 Baths" data-area="2,400 Sq.Ft" data-img="assets/skyline_towers.jpg" data-reveal="fade-up" data-delay="200">
+                            <div class="card-media">
+                                <div class="card-img" style="background-image: url('assets/skyline_towers.jpg');"></div>
+                                <span class="status-pill orange">UNDER CONSTRUCTION</span>
+                                <button class="fav-btn" aria-label="Save property"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="prop-title">Skyline Heights</h3>
+                                <p class="prop-address"><i class="fa-solid fa-location-dot"></i> Central Avenue, CBD</p>
+                                <div class="prop-specs">
+                                    <span><i class="fa-solid fa-bed"></i> 3 Beds</span>
+                                    <span class="spec-dot">•</span>
+                                    <span><i class="fa-solid fa-bath"></i> 3 Baths</span>
+                                    <span class="spec-dot">•</span>
+                                    <span><i class="fa-solid fa-vector-square"></i> 2,400 Sq.Ft</span>
+                                </div>
+                                <div class="prop-footer">
+                                    <div class="price-box">
+                                        <span class="price-val">₹ 3.4 Cr*</span>
+                                    </div>
+                                    <button class="card-action-sq quick-prop-btn" aria-label="View property details"><i class="fa-solid fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 3 -->
+                        <div class="property-card" data-category="villas ready" data-title="The Emerald Collection" data-price="₹ 9.8 Cr*" data-location="Lakeside Blvd, North Park" data-beds="5 Beds" data-baths="6 Baths" data-area="5,800 Sq.Ft" data-img="assets/the_emerald.jpg" data-reveal="fade-up" data-delay="300">
+                            <div class="card-media">
+                                <div class="card-img" style="background-image: url('assets/the_emerald.jpg');"></div>
+                                <span class="status-pill green">READY TO MOVE</span>
+                                <button class="fav-btn" aria-label="Save property"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="prop-title">The Emerald Collection</h3>
+                                <p class="prop-address"><i class="fa-solid fa-location-dot"></i> Lakeside Blvd, North Park</p>
+                                <div class="prop-specs">
+                                    <span><i class="fa-solid fa-bed"></i> 5 Beds</span>
+                                    <span class="spec-dot">•</span>
+                                    <span><i class="fa-solid fa-bath"></i> 6 Baths</span>
+                                    <span class="spec-dot">•</span>
+                                    <span><i class="fa-solid fa-vector-square"></i> 5,800 Sq.Ft</span>
+                                </div>
+                                <div class="prop-footer">
+                                    <div class="price-box">
+                                        <span class="price-val">₹ 9.8 Cr*</span>
+                                    </div>
+                                    <button class="card-action-sq quick-prop-btn" aria-label="View property details"><i class="fa-solid fa-arrow-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Property 4 (Slide Item) -->
+                        <div class="property-card" data-category="penthouse ready" data-title="Aura Sky Penthouses" data-price="₹ 14.5 Cr*" data-location="Billionaires Row, Marina" data-beds="5 Beds" data-baths="5 Baths" data-area="6,200 Sq.Ft" data-img="assets/sky_villa.jpg" data-reveal="fade-up" data-delay="400">
+                            <div class="card-media">
+                                <div class="card-img" style="background-image: url('assets/sky_villa.jpg');"></div>
+                                <span class="status-pill green">READY TO MOVE</span>
+                                <button class="fav-btn" aria-label="Save property"><i class="fa-regular fa-heart"></i></button>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="prop-title">Aura Sky Penthouses</h3>
+                                <p class="prop-address"><i class="fa-solid fa-location-dot"></i> Billionaires Row, Marina</p>
+                                <div class="prop-specs">
+                                    <span><i class="fa-solid fa-bed"></i> 5 Beds</span>
+                                    <span class="spec-dot">•</span>
+                                    <span><i class="fa-solid fa-bath"></i> 5 Baths</span>
+                                    <span class="spec-dot">•</span>
+                                    <span><i class="fa-solid fa-vector-square"></i> 6,200 Sq.Ft</span>
+                                </div>
+                                <div class="prop-footer">
+                                    <div class="price-box">
+                                        <span class="price-val">₹ 14.5 Cr*</span>
+                                    </div>
+                                    <button class="card-action-sq quick-prop-btn" aria-label="View property details"><i class="fa-solid fa-arrow-right"></i></button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="project-cards-grid">
-                        <div class="project-card" data-location="Azure Bay">
-                            <div class="project-img" style="background-image: url('assets/hero3.png');"></div>
-                            <div class="project-info">
-                                <h4>Azure Bay Villas</h4>
-                                <p><strong>Location:</strong> Malibu Coast, CA</p>
-                                <a href="https://maps.google.com/?q=Malibu+Coast" target="_blank" class="btn-text">View on Map <i class="fas fa-location-dot"></i></a>
-                            </div>
+                </div>
+
+                <!-- Pagination Dots for Properties -->
+                <div class="property-slider-dots" id="propDots">
+                    <span class="p-dot active" data-index="0"></span>
+                    <span class="p-dot" data-index="1"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. LIFESTYLE BANNER & GALLERY STRIP -->
+        <section id="lifestyle" class="lifestyle-section">
+            <div class="container lifestyle-wrapper">
+                <!-- Left Dark Callout -->
+                <div class="lifestyle-intro" data-reveal="fade-right">
+                    <span class="sub-label light">OUR COMMUNITIES</span>
+                    <h2>More Than Homes,<br>A Lifestyle</h2>
+                    <p>From serene quiet mornings to world-class sports facilities, every detail is designed to give you the gift of modern wellness, calm, and community.</p>
+                    <button class="btn-lifestyle-pill open-inquiry-btn">
+                        <span>EXPLORE AMENITIES</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+
+                <!-- Right 4 Column Amenity Cards -->
+                <div class="amenities-tiles-grid" data-reveal="fade-left">
+                    <div class="amenity-tile" onclick="openAmenityDetail('Clubhouse & Wellness Spa', 'Features personalized salon services, private sauna, heated steam suites, and rejuvenating meditation pods.', 'assets/the_residences.jpg');">
+                        <div class="tile-img" style="background-image: url('assets/the_residences.jpg');"></div>
+                        <div class="tile-caption">
+                            <h4>Clubhouse</h4>
+                            <p>Salon & Rejuvenation</p>
                         </div>
-                        <div class="project-card" data-location="Emerald Hills">
-                            <div class="project-img" style="background-image: url('assets/hero1.png');"></div>
-                            <div class="project-info">
-                                <h4>Emerald Residences</h4>
-                                <p><strong>Location:</strong> Swiss Alps, Zermatt</p>
-                                <a href="https://maps.google.com/?q=Zermatt+Switzerland" target="_blank" class="btn-text">View on Map <i class="fas fa-location-dot"></i></a>
-                            </div>
+                    </div>
+                    <div class="amenity-tile" onclick="openAmenityDetail('Skyline Fitness Center', 'Outfitted with top-tier Technogym biometric machines, dedicated yoga atrium, and panoramic city views.', 'assets/fitness_center.jpg');">
+                        <div class="tile-img" style="background-image: url('assets/fitness_center.jpg');"></div>
+                        <div class="tile-caption">
+                            <h4>Skyline Fitness Center</h4>
+                            <p>Stay active & fit</p>
                         </div>
-                        <div class="project-card" data-location="CBD">
-                            <div class="project-img" style="background-image: url('assets/hero2.png');"></div>
-                            <div class="project-info">
-                                <h4>The Sterling Tower</h4>
-                                <p><strong>Location:</strong> Manhattan, NY</p>
-                                <a href="https://maps.google.com/?q=Manhattan+NY" target="_blank" class="btn-text">View on Map <i class="fas fa-location-dot"></i></a>
-                            </div>
+                    </div>
+                    <div class="amenity-tile" onclick="openAmenityDetail('Botanical Parks & Green Trails', 'Winding cobblestone walking trails amidst sculptured gardens, zen fountains, and morning bird sanctuaries.', 'assets/green_spaces.jpg');">
+                        <div class="tile-img" style="background-image: url('assets/green_spaces.jpg');"></div>
+                        <div class="tile-caption">
+                            <h4>Green Spaces</h4>
+                            <p>Breathe the serene</p>
+                        </div>
+                    </div>
+                    <div class="amenity-tile" onclick="openAmenityDetail('Community Clubhouse & Banquet', 'Curated spaces for festive soirees, private film screenings, resident social hours, and intimate gatherings.', 'assets/community_living.jpg');">
+                        <div class="tile-img" style="background-image: url('assets/community_living.jpg');"></div>
+                        <div class="tile-caption">
+                            <h4>Community Living</h4>
+                            <p>Gather together</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 5. About Builder -->
-        <section id="about" class="section-padding">
-            <div class="container flex-split reverse">
-                <div class="split-text" data-reveal>
-                    <h3 class="section-subtitle">The Visionary</h3>
-                    <h2 class="section-title">Meet David Sterling</h2>
-                    <p>With a legacy spanning two decades, David Sterling has been at the forefront of luxury real estate development. His philosophy is simple: build what will stand for centuries.</p>
-                    <p>Under his leadership, LUXE has transformed from a boutique design house into a global benchmark for architectural excellence and sustainable development.</p>
-                    <div class="signature">
-                        <span class="signature-text">David Sterling</span>
-                        <p>CEO & Lead Architect</p>
-                    </div>
-                </div>
-                <div class="split-visual" data-reveal>
-                    <div class="builder-image-wrapper">
-                        <img src="assets/builder.png" alt="David Sterling" class="builder-img">
-                        <div class="builder-frame"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. Why Choose Us -->
-        <section id="why-us" class="section-padding bg-platinum">
+        <!-- 6. 360° INTERACTIVE VIRTUAL TOUR EXPERIENCE -->
+        <section id="virtual-tour" class="virtual-tour-section">
             <div class="container">
-                <div class="text-center mb-60">
-                    <h3 class="section-subtitle">The LUXE Difference</h3>
-                    <h2 class="section-title">Engineered for Excellence</h2>
-                </div>
-                <div class="features-grid">
-                    <div class="feature-card" data-reveal>
-                        <div class="feature-icon"><i class="fas fa-gem"></i></div>
-                        <h3>Timeless Design</h3>
-                        <p>Architectural aesthetics that transcend trends, blending classical elegance with modern functionality.</p>
-                    </div>
-                    <div class="feature-card" data-reveal>
-                        <div class="feature-icon"><i class="fas fa-handshake-angle"></i></div>
-                        <h3>Concierge Services</h3>
-                        <p>24/7 personalized assistance for our residents, from travel bookings to bespoke event planning.</p>
-                    </div>
-                    <div class="feature-card" data-reveal>
-                        <div class="feature-icon"><i class="fas fa-microchip"></i></div>
-                        <h3>Smart Ecosystem</h3>
-                        <p>Fully integrated home automation systems controlled seamlessly via your personal devices.</p>
-                    </div>
-                    <div class="feature-card" data-reveal>
-                        <div class="feature-icon"><i class="fas fa-key"></i></div>
-                        <h3>Asset Security</h3>
-                        <p>State-of-the-art biometric security and professional surveillance ensuring absolute peace of mind.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <div class="tour-banner-card" data-reveal="fade-up">
+                    <div class="tour-img-bg" style="background-image: url('assets/virtual_tour.jpg');"></div>
+                    <div class="tour-overlay"></div>
+                    <div class="tour-layout-grid">
+                        <div class="tour-content">
+                            <span class="sub-label light"><i class="fa-solid fa-vr-cardboard"></i> IMMERSIVE 3D EXPERIENCE</span>
+                            <h2>Step Inside Before You Step Out</h2>
+                            <p>Take an ultra-high definition walkthrough of our penthouse master suites, infinity decks, and private botanical lounges from anywhere in the world.</p>
+                            
+                            <!-- Interactive Hotspot Badges -->
+                            <div class="tour-hotspots-row">
+                                <div class="tour-hotspot-item" onclick="switchTourView('Grand Living Salon', 'assets/virtual_tour.jpg');">
+                                    <span class="hotspot-pulse"><i class="fa-solid fa-eye"></i></span>
+                                    <div>
+                                        <h5>Grand Living Salon</h5>
+                                        <small>Floor 42 View</small>
+                                    </div>
+                                </div>
+                                <div class="tour-hotspot-item" onclick="switchTourView('Sunset Sky Terrace', 'assets/sky_villa.jpg');">
+                                    <span class="hotspot-pulse"><i class="fa-solid fa-compass"></i></span>
+                                    <div>
+                                        <h5>Sunset Sky Terrace</h5>
+                                        <small>360° Panorama</small>
+                                    </div>
+                                </div>
+                                <div class="tour-hotspot-item" onclick="switchTourView('Private Wellness Spa', 'assets/the_residences.jpg');">
+                                    <span class="hotspot-pulse"><i class="fa-solid fa-layer-group"></i></span>
+                                    <div>
+                                        <h5>Private Wellness Spa</h5>
+                                        <small>Heated Hydro-pool</small>
+                                    </div>
+                                </div>
+                            </div>
 
-        <!-- 6.5 Nearest Facilities (New Section) -->
-        <section id="facilities" class="section-padding">
-            <div class="container">
-                <div class="text-center mb-60">
-                    <h3 class="section-subtitle">Curated Convenience</h3>
-                    <h2 class="section-title">The LUXE Neighborhood</h2>
-                </div>
-                <div class="facilities-grid">
-                    <div class="facility-card" data-reveal>
-                        <div class="facility-img" style="background-image: url('assets/hero2.png');">
-                            <div class="facility-icon-overlay"><i class="fas fa-plane-up"></i></div>
-                        </div>
-                        <div class="facility-info">
-                            <h4>Private Jet Terminal</h4>
-                            <p>Exclusive 15-minute access to regional jet terminals for seamless global travel.</p>
-                        </div>
-                    </div>
-                    <div class="facility-card" data-reveal>
-                        <div class="facility-img" style="background-image: url('assets/gallery1.png');">
-                            <div class="facility-icon-overlay"><i class="fas fa-utensils"></i></div>
-                        </div>
-                        <div class="facility-info">
-                            <h4>Michelin Star Dining</h4>
-                            <p>Priority reservations at the world's most acclaimed culinary destinations within reach.</p>
-                        </div>
-                    </div>
-                    <div class="facility-card" data-reveal>
-                        <div class="facility-img" style="background-image: url('assets/hero1.png');">
-                            <div class="facility-icon-overlay"><i class="fas fa-spa"></i></div>
-                        </div>
-                        <div class="facility-info">
-                            <h4>Signature Wellness</h4>
-                            <p>Integrated partnerships with elite spa and longevity centers for your well-being.</p>
-                        </div>
-                    </div>
-                    <div class="facility-card" data-reveal>
-                        <div class="facility-img" style="background-image: url('assets/hero3.png');">
-                            <div class="facility-icon-overlay"><i class="fas fa-helicopter"></i></div>
-                        </div>
-                        <div class="facility-info">
-                            <h4>Helipad Access</h4>
-                            <p>Private helipads at all locations for rapid transit between city and sanctuary.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 7. Gallery Section -->
-        <section id="gallery" class="section-padding">
-            <div class="container">
-                <div class="text-center mb-60">
-                    <h3 class="section-subtitle">Visual Journey</h3>
-                    <h2 class="section-title">The Gallery of Grandeur</h2>
-                </div>
-                <div class="gallery-grid">
-                    <div class="gallery-item large" style="background-image: url('assets/gallery1.png');" data-reveal>
-                        <div class="gallery-overlay"><span>The Grand Foyer</span></div>
-                    </div>
-                    <div class="gallery-item" style="background-image: url('assets/gallery2.png');" data-reveal>
-                        <div class="gallery-overlay"><span>Master Suite</span></div>
-                    </div>
-                    <div class="gallery-item" style="background-image: url('assets/hero2.png');" data-reveal>
-                        <div class="gallery-overlay"><span>Penthouse Lounge</span></div>
-                    </div>
-                    <div class="gallery-item" style="background-image: url('assets/hero1.png');" data-reveal>
-                        <div class="gallery-overlay"><span>Infinity Pool</span></div>
-                    </div>
-                    <div class="gallery-item" style="background-image: url('assets/hero3.png');" data-reveal>
-                        <div class="gallery-overlay"><span>Terrace Garden</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 8. Download Portfolio -->
-        <section id="download" class="cta-section">
-            <div class="container text-center">
-                <div class="cta-box">
-                    <h2 data-reveal>Own the Complete Brochure</h2>
-                    <p data-reveal>Get detailed floor plans, specification sheets, and a complete lookbook of our upcoming projects.</p>
-                    <a href="#" class="btn btn-primary btn-large" data-reveal><i class="fas fa-file-pdf"></i> Download Portfolio PDF</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 9. Testimonials -->
-        <section id="testimonials" class="section-padding bg-light">
-            <div class="container">
-                <div class="text-center mb-60">
-                    <h3 class="section-subtitle">Voices of Trust</h3>
-                    <h2 class="section-title">Client Experiences</h2>
-                </div>
-                <div class="testimonial-container">
-                    <div class="testimonial-slider-track">
-                        <div class="testimonial-card active">
-                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                            <p>"LUXE doesn't just build houses; they craft legacies. The attention to detail in our villa is something I haven't seen in three decades of property investment."</p>
-                            <div class="testimonial-author">
-                                <h4>Alexander Rothschild</h4>
-                                <span>Venture Capitalist</span>
+                            <div class="tour-actions">
+                                <button class="btn btn-tour-primary" id="startTourBtn">
+                                    <i class="fa-solid fa-play"></i>
+                                    <span>Launch 360° Virtual Walkthrough</span>
+                                </button>
+                                <button class="btn btn-tour-secondary open-inquiry-btn">
+                                    <i class="fa-solid fa-calendar-check"></i>
+                                    <span>Book In-Person VIP Tour</span>
+                                </button>
                             </div>
                         </div>
-                        <div class="testimonial-card">
-                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                            <p>"The level of concierge service and smart integration in the Sterling Tower is unmatched. It feels like living in the future, today."</p>
-                            <div class="testimonial-author">
-                                <h4>Elena Vance</h4>
-                                <span>Tech Entrepreneur</span>
+
+                        <!-- Right Side Live 360 Room Card -->
+                        <div class="tour-right-preview-card" data-reveal="fade-left">
+                            <div class="preview-badge-live">
+                                <span class="live-dot"></span> LIVE 3D ATELIER
                             </div>
-                        </div>
-                        <div class="testimonial-card">
-                            <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
-                            <p>"Sustainability was our priority, and Emerald Residences delivered beyond expectation without compromising a single luxury amenity."</p>
-                            <div class="testimonial-author">
-                                <h4>Marcus Thorne</h4>
-                                <span>Environmental Architect</span>
+                            <div class="preview-thumb-showcase" style="background-image: url('assets/sky_villa.jpg');" onclick="switchTourView('Sunset Sky Terrace', 'assets/sky_villa.jpg');">
+                                <div class="play-pulse-circle">
+                                    <i class="fa-solid fa-vr-cardboard"></i>
+                                </div>
+                                <span class="preview-loc-pill">Floor 48 • Sky Penthouse</span>
+                            </div>
+                            <div class="preview-card-details">
+                                <h4>Sunset Sky Terrace & Infinity Pool</h4>
+                                <p>Drag to explore panoramic 360° views across the city skyline and harbor sunset.</p>
+                                <div class="preview-card-metrics">
+                                    <div>
+                                        <strong>4K UHD</strong>
+                                        <small>Rendering</small>
+                                    </div>
+                                    <div class="p-divider"></div>
+                                    <div>
+                                        <strong>360° × 180°</strong>
+                                        <small>Field of View</small>
+                                    </div>
+                                    <div class="p-divider"></div>
+                                    <div>
+                                        <strong>Spatial Audio</strong>
+                                        <small>Enabled</small>
+                                    </div>
+                                </div>
+                                <button class="btn-preview-launch" onclick="switchTourView('Sunset Sky Terrace', 'assets/sky_villa.jpg');">
+                                    <span>Experience Room in 3D</span>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </button>
                             </div>
                         </div>
                     </div>
-                    <div class="testimonial-nav">
-                        <span class="t-dot active" data-index="0"></span>
-                        <span class="t-dot" data-index="1"></span>
-                        <span class="t-dot" data-index="2"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. NEIGHBORHOOD & STRATEGIC CONNECTIVITY -->
+        <section id="neighborhood" class="neighborhood-section">
+            <div class="container">
+                <div class="section-center-head text-center" data-reveal="fade-up">
+                    <span class="sub-label">CONNECTED LIVING</span>
+                    <h2 class="section-heading">Strategic Connectivity at Your Doorstep</h2>
+                    <p class="section-sub-copy">Located in high-growth prime districts with rapid transit to international terminals, financial centers, and premier schools.</p>
+                </div>
+
+                <div class="neighborhood-grid">
+                    <div class="neighborhood-card" data-reveal="fade-up" data-delay="100">
+                        <div class="n-icon-box"><i class="fa-solid fa-plane-departure"></i></div>
+                        <div class="n-meta">
+                            <span class="n-time">15 Mins</span>
+                            <h4>International Airport</h4>
+                            <p>Direct non-stop expressway connection for effortless global business travel.</p>
+                        </div>
+                    </div>
+                    <div class="neighborhood-card" data-reveal="fade-up" data-delay="200">
+                        <div class="n-icon-box"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="n-meta">
+                            <span class="n-time">10 Mins</span>
+                            <h4>Central Business District</h4>
+                            <p>Quick proximity to Fortune 500 headquarters and modern commercial plazas.</p>
+                        </div>
+                    </div>
+                    <div class="neighborhood-card" data-reveal="fade-up" data-delay="300">
+                        <div class="n-icon-box"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="n-meta">
+                            <span class="n-time">08 Mins</span>
+                            <h4>World-Class Academies</h4>
+                            <p>Renowned international IB schools and elite university institutions nearby.</p>
+                        </div>
+                    </div>
+                    <div class="neighborhood-card" data-reveal="fade-up" data-delay="400">
+                        <div class="n-icon-box"><i class="fa-solid fa-hospital"></i></div>
+                        <div class="n-meta">
+                            <span class="n-time">12 Mins</span>
+                            <h4>Multi-Specialty MedCare</h4>
+                            <p>JCI-accredited medical facilities and 24/7 emergency centers within minutes.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- 10. Associated Partners -->
-        <section id="partners" class="section-padding bg-light">
-            <div class="container text-center">
-                <h3 class="section-subtitle">Collaborations</h3>
-                <h2 class="section-title">Global Partners</h2>
-                <div class="partner-logos">
-                    <div class="partner-track">
-                        <div class="partner-logo"><span>AURUM</span></div>
-                        <div class="partner-logo"><span>STERLING</span></div>
-                        <div class="partner-logo"><span>VERIDIAN</span></div>
-                        <div class="partner-logo"><span>MARBLE & CO</span></div>
-                        <div class="partner-logo"><span>NEXUS</span></div>
-                        <div class="partner-logo"><span>AURUM</span></div>
-                        <div class="partner-logo"><span>STERLING</span></div>
-                        <div class="partner-logo"><span>VERIDIAN</span></div>
-                        <div class="partner-logo"><span>MARBLE & CO</span></div>
-                        <div class="partner-logo"><span>NEXUS</span></div>
+        <!-- 8. SMART MORTGAGE CALCULATOR -->
+        <section id="mortgage" class="mortgage-section">
+            <div class="container">
+                <div class="mortgage-card-container" data-reveal="fade-up">
+                    <div class="mortgage-form-side">
+                        <span class="sub-label">FINANCIAL PLANNING</span>
+                        <h2 class="calc-heading">Smart Investment Calculator</h2>
+                        <p class="calc-intro">Estimate your monthly mortgage payments and personalize your investment plan with current premier interest rates.</p>
+
+                        <div class="calc-inputs-wrapper">
+                            <!-- Slider 1: Property Value -->
+                            <div class="calc-slider-group">
+                                <div class="slider-labels">
+                                    <label for="homePrice">Property Price</label>
+                                    <span class="slider-display" id="homePriceVal">₹ 5,00,00,000</span>
+                                </div>
+                                <input type="range" id="homePrice" min="10000000" max="200000000" step="5000000" value="50000000" class="calc-range">
+                            </div>
+
+                            <!-- Slider 2: Down Payment -->
+                            <div class="calc-slider-group">
+                                <div class="slider-labels">
+                                    <label for="downPayment">Down Payment (20%)</label>
+                                    <span class="slider-display" id="downPaymentVal">₹ 1,00,00,000 (20%)</span>
+                                </div>
+                                <input type="range" id="downPayment" min="10" max="50" step="5" value="20" class="calc-range">
+                            </div>
+
+                            <!-- Two Columns: Loan Term & Interest Rate -->
+                            <div class="calc-dual-row">
+                                <div class="calc-select-col">
+                                    <label for="loanTenure">Tenure (Years)</label>
+                                    <select id="loanTenure" class="calc-select">
+                                        <option value="10">10 Years</option>
+                                        <option value="15">15 Years</option>
+                                        <option value="20" selected>20 Years</option>
+                                        <option value="25">25 Years</option>
+                                    </select>
+                                </div>
+                                <div class="calc-select-col">
+                                    <label for="interestRate">Interest Rate (%)</label>
+                                    <input type="number" id="interestRate" step="0.1" value="8.5" class="calc-num-input">
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Right Result Summary Box -->
+                    <div class="mortgage-result-side">
+                        <div class="result-box-inner">
+                            <span class="emi-sub">ESTIMATED MONTHLY PAYMENT</span>
+                            <div class="emi-amount" id="emiDisplay">₹ 3,47,119<small>/mo</small></div>
+
+                            <div class="breakdown-list">
+                                <div class="breakdown-row">
+                                    <span>Principal Loan:</span>
+                                    <strong id="principalVal">₹ 4,00,00,000</strong>
+                                </div>
+                                <div class="breakdown-row">
+                                    <span>Total Interest:</span>
+                                    <strong id="interestTotalVal">₹ 4,33,08,560</strong>
+                                </div>
+                                <div class="breakdown-row total-highlight">
+                                    <span>Total Payable:</span>
+                                    <strong id="totalPayableVal">₹ 8,33,08,560</strong>
+                                </div>
+                            </div>
+
+                            <button class="btn btn-calc-consult open-inquiry-btn">
+                                <i class="fa-solid fa-file-invoice-dollar"></i> Get Pre-Approved Loan Quote
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 9. TESTIMONIALS SLIDER SECTION -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="testimonials-top-row">
+                    <div class="t-header" data-reveal="fade-up">
+                        <span class="sub-label">TESTIMONIALS</span>
+                        <h2 class="section-heading">Loved by Families,<br>Trusted by Many</h2>
+                        <p class="section-sub-copy">Read stories from our residents who found more than just a home.</p>
+                    </div>
+                    <div class="t-nav-btns" data-reveal="fade-up">
+                        <button class="c-arrow prev" id="tPrev" aria-label="Previous review"><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="c-arrow next" id="tNext" aria-label="Next review"><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+
+                <div class="testimonials-slider-viewport">
+                    <div class="testimonials-slider-track" id="testimonialCardsTrack">
+                        <!-- Review 1 -->
+                        <div class="testi-card active" data-reveal="fade-up" data-delay="100">
+                            <div class="quote-sign">“</div>
+                            <p class="review-text">The entire buying process was smooth and transparent. The quality of construction and delivered layout exceeded our expectation.</p>
+                            <div class="reviewer-meta">
+                                <div class="rev-avatar" style="background-image: url('https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&q=80');"></div>
+                                <div class="rev-details">
+                                    <h5>Priya Sharma</h5>
+                                    <span>Noida</span>
+                                </div>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 2 -->
+                        <div class="testi-card" data-reveal="fade-up" data-delay="200">
+                            <div class="quote-sign">“</div>
+                            <p class="review-text">A rare balance of modern amenities and peaceful surroundings. My children celebrate the landscaping and community events every week.</p>
+                            <div class="reviewer-meta">
+                                <div class="rev-avatar" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80');"></div>
+                                <div class="rev-details">
+                                    <h5>Anil Verma</h5>
+                                    <span>Gurugram</span>
+                                </div>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 3 -->
+                        <div class="testi-card" data-reveal="fade-up" data-delay="300">
+                            <div class="quote-sign">“</div>
+                            <p class="review-text">Professional team, timely delivery, and excellent customer support throughout the purchase. Extremely highly recommended!</p>
+                            <div class="reviewer-meta">
+                                <div class="rev-avatar" style="background-image: url('https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80');"></div>
+                                <div class="rev-details">
+                                    <h5>Kavita Kapoor</h5>
+                                    <span>Delhi</span>
+                                </div>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Review 4 -->
+                        <div class="testi-card" data-reveal="fade-up" data-delay="400">
+                            <div class="quote-sign">“</div>
+                            <p class="review-text">Sobha Seas has set the benchmark for luxury development in the city. The clubhouse and sports academies are truly world class.</p>
+                            <div class="reviewer-meta">
+                                <div class="rev-avatar" style="background-image: url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80');"></div>
+                                <div class="rev-details">
+                                    <h5>Rahul Mehta</h5>
+                                    <span>Mumbai</span>
+                                </div>
+                                <div class="stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-slider-dots" id="testiDots">
+                    <span class="t-dot active" data-index="0"></span>
+                    <span class="t-dot" data-index="1"></span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 10. FAQ ACCORDION -->
+        <section id="faq" class="faq-section">
+            <div class="container">
+                <div class="section-center-head text-center" data-reveal="fade-up">
+                    <span class="sub-label">GOT QUESTIONS?</span>
+                    <h2 class="section-heading">Frequently Asked Questions</h2>
+                    <p class="section-sub-copy">Everything you need to know about purchasing, possession timelines, and our luxury amenities.</p>
+                </div>
+
+                <div class="faq-accordion-wrapper" data-reveal="fade-up">
+                    <div class="faq-item active">
+                        <button class="faq-question">
+                            <span>What makes SOBHA SEAS properties unique compared to standard luxury real estate?</span>
+                            <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Every SOBHA SEAS residence is designed with backward-integrated architectural precision. We utilize sustainable green building standards, sound-isolated acoustic glass, smart-automation infrastructure, and dedicate over 75% of our community acreage to private landscaped greenery and lifestyle amenities.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Are all projects RERA certified and legally vetted?</span>
+                            <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Yes, 100% of our residential developments hold active RERA certifications with transparent title deeds and clear financial disclosures. We provide complete documentation packets prior to any booking agreements.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What financing and payment schedules are available?</span>
+                            <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>We partner with major leading private banks to offer tailored construction-linked payment plans (CLP), flexible down-payment schedules, and preferential interest rates with customized pre-approval processing.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Can I customize interior specifications before handover?</span>
+                            <i class="fa-solid fa-plus faq-toggle-icon"></i>
+                        </button>
+                        <div class="faq-answer">
+                            <p>For bespoke penthouses and luxury villas, our in-house atelier team provides personalized consultations allowing clients to select imported Italian marble finishes, bespoke cabinetry, wine cellars, and lighting mood schemes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. NEWSLETTER BANNER -->
+        <section id="contact" class="newsletter-section" data-reveal="fade-up">
+            <div class="newsletter-card" style="background-image: url('assets/hero3.png');">
+                <div class="newsletter-overlay"></div>
+                <div class="container newsletter-content">
+                    <div class="nl-text">
+                        <h2>Stay Updated with<br>Exclusive Opportunities</h2>
+                        <p>Receive our curated newsletter featuring luxury project releases, private viewings, and market updates.</p>
+                    </div>
+                    <form id="newsletterForm" class="nl-form">
+                        <div class="nl-input-group">
+                            <input type="email" id="newsletterEmail" placeholder="Enter your email address..." required>
+                            <button type="submit" aria-label="Subscribe to newsletter"><i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="main-footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <div class="logo">LUXE<span>.</span></div>
-                    <p>Crafting architectural legacies since 2008. Dedicated to the pursuit of absolute perfection in every square foot.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    </div>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-main-grid">
+            <!-- Brand Column -->
+            <div class="f-brand-col">
+                <div class="footer-logo">
+                    <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                    <span class="brand-text">SOBHA SEAS</span>
                 </div>
-                <div class="footer-links">
-                    <h4>Explore</h4>
-                    <ul>
-                        <li><a href="#">Properties</a></li>
-                        <li><a href="#">Locations</a></li>
-                        <li><a href="#">Virtual Tours</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <ul>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Awards</a></li>
-                        <li><a href="#">Sustainability</a></li>
-                    </ul>
-                </div>
-                <div class="footer-contact">
-                    <h4>Contact</h4>
-                    <p><i class="fas fa-envelope"></i> concierge@luxe.com</p>
-                    <p><i class="fas fa-phone"></i> +1 (800) 555-LUXE</p>
+                <span class="brand-subline">RESIDENTIAL DEVELOPERS</span>
+                <p class="brand-description">
+                    Curated residential and commercial spaces designed for timeless living. Quality. Trust. Communities.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 LUXE Global Realty. All Rights Reserved.</p>
+
+            <!-- Quick Links -->
+            <div class="f-links-col">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#properties">Our Portfolio</a></li>
+                    <li><a href="#lifestyle">Amenities</a></li>
+                    <li><a href="#virtual-tour">Virtual Tour</a></li>
+                    <li><a href="#mortgage">Mortgage Calculator</a></li>
+                </ul>
+            </div>
+
+            <!-- Properties -->
+            <div class="f-links-col">
+                <h4>PROPERTIES</h4>
+                <ul>
+                    <li><a href="#properties" class="footer-filter-link" data-filter="ready">Ready to Move</a></li>
+                    <li><a href="#properties" class="footer-filter-link" data-filter="villas">Luxury Villas</a></li>
+                    <li><a href="#properties" class="footer-filter-link" data-filter="penthouse">Sky Penthouses</a></li>
+                    <li><button class="footer-inquiry-trigger open-inquiry-btn">Brochure Download</button></li>
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="f-links-col contact-col">
+                <h4>CONTACT</h4>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>A-102, Skyline Blvd, Beverly Hills, California 90210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span><a href="tel:+919876543210">+91 98765 43210</a></span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span><a href="mailto:contact@sobhaseas.com">contact@sobhaseas.com</a></span>
+                    </li>
+                </ul>
             </div>
         </div>
+
+        <div class="container footer-bottom-bar">
+            <p>&copy; 2026 SOBHA SEAS. All Rights Reserved.</p>
+            <div class="f-bottom-links">
+                <a href="#" onclick="alert('Privacy Policy: All information submitted is protected with 256-bit SSL encryption.'); return false;">Privacy Policy</a>
+                <span class="sep">|</span>
+                <a href="#" onclick="alert('Terms & Conditions: Prices and specifications are indicative and subject to change without prior notice.'); return false;">Terms & Conditions</a>
+            </div>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
     </footer>
+
+    <!-- Video Modal / Story modal -->
+    <div id="videoModal" class="modal-backdrop">
+        <div class="modal-card">
+            <button class="modal-close" id="closeModalBtn" aria-label="Close modal">&times;</button>
+            <div class="video-container">
+                <div class="video-placeholder-banner" style="background-image: url('assets/hero_villa.jpg');">
+                    <div class="v-content">
+                        <span class="v-badge">SOBHA SEAS CINEMATIC TOUR</span>
+                        <h3>Spaces That Elevate Your Everyday</h3>
+                        <p>Immerse yourself into architectural mastery, panoramic infinity waters, and elevated lifestyle living.</p>
+                        <button class="btn btn-dark-pill" onclick="showToast('Playing Film', '4K Cinematic tour stream initialized.');">
+                            <i class="fa-solid fa-play"></i> Watch Full Film (3:45)
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Virtual Tour 360 Modal -->
+    <div id="tourModal" class="modal-backdrop">
+        <div class="modal-card modal-large">
+            <button class="modal-close" id="closeTourModalBtn" aria-label="Close tour">&times;</button>
+            <div class="video-container">
+                <div id="tourModalView" class="video-placeholder-banner" style="background-image: url('assets/virtual_tour.jpg'); height: 500px;">
+                    <div class="v-content">
+                        <span class="v-badge"><i class="fa-solid fa-vr-cardboard"></i> 360° INTERACTIVE EXPLORER</span>
+                        <h3 id="tourViewTitle">Grand Living Salon</h3>
+                        <p>Explore this space with multi-angle perspective switches.</p>
+                        <div class="tour-switch-buttons">
+                            <button class="btn btn-dark-pill" onclick="switchTourView('Grand Living Salon', 'assets/virtual_tour.jpg');"><i class="fa-solid fa-couch"></i> Living Salon</button>
+                            <button class="btn btn-dark-pill" onclick="switchTourView('Sunset Sky Terrace', 'assets/sky_villa.jpg');"><i class="fa-solid fa-sun"></i> Sky Terrace</button>
+                            <button class="btn btn-dark-pill" onclick="switchTourView('Master Oasis Suite', 'assets/the_emerald.jpg');"><i class="fa-solid fa-bed"></i> Master Suite</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Property Quick View Modal -->
+    <div id="propertyModal" class="modal-backdrop">
+        <div class="modal-card modal-medium">
+            <button class="modal-close" id="closePropertyModalBtn" aria-label="Close modal">&times;</button>
+            <div class="prop-modal-content">
+                <div id="propModalImg" class="prop-modal-media" style="background-image: url('assets/the_residences.jpg');">
+                    <span id="propModalPrice" class="prop-badge-price">₹ 5.8 Cr*</span>
+                </div>
+                <div class="prop-modal-body">
+                    <span class="sub-label">LUXURY SPECIFICATION</span>
+                    <h3 id="propModalTitle">The Cove Residences</h3>
+                    <p id="propModalAddress" class="prop-modal-addr"><i class="fa-solid fa-location-dot"></i> Sector 54, Golf Course Road</p>
+                    
+                    <div class="prop-modal-features">
+                        <div class="p-feat-item">
+                            <i class="fa-solid fa-bed"></i>
+                            <span id="propModalBeds">4 Beds</span>
+                        </div>
+                        <div class="p-feat-item">
+                            <i class="fa-solid fa-bath"></i>
+                            <span id="propModalBaths">4 Baths</span>
+                        </div>
+                        <div class="p-feat-item">
+                            <i class="fa-solid fa-vector-square"></i>
+                            <span id="propModalArea">3,500 Sq.Ft</span>
+                        </div>
+                        <div class="p-feat-item">
+                            <i class="fa-solid fa-parking"></i>
+                            <span>3 Covered Bays</span>
+                        </div>
+                    </div>
+
+                    <p class="prop-modal-desc">
+                        Engineered with Italian marble flooring, soundproof triple-glazed windows, private elevator lobby, and panoramic balconies overlooking scenic green horizons.
+                    </p>
+
+                    <div class="prop-modal-actions">
+                        <button class="btn btn-tour-primary open-inquiry-btn" style="width: 100%;">
+                            <i class="fa-solid fa-calendar-check"></i> Book Private Site Tour
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking & Inquiry Consultation Modal -->
+    <div id="inquiryModal" class="modal-backdrop">
+        <div class="modal-card modal-medium">
+            <button class="modal-close" id="closeInquiryModalBtn" aria-label="Close modal">&times;</button>
+            <div class="inquiry-modal-body">
+                <span class="sub-label">PRIVATE CONCIERGE</span>
+                <h3 class="inquiry-title">Schedule a VIP Consultation</h3>
+                <p class="inquiry-sub">Our senior real estate advisors will provide bespoke property portfolios, floor plans, and preferential investment allocations.</p>
+
+                <form id="inquiryForm" class="inquiry-form-grid">
+                    <div class="inq-field">
+                        <label>Your Full Name *</label>
+                        <input type="text" id="inqName" placeholder="e.g. Alexander Vance" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Email Address *</label>
+                        <input type="email" id="inqEmail" placeholder="e.g. alex@example.com" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Phone / WhatsApp *</label>
+                        <input type="tel" id="inqPhone" placeholder="+91 98765 00000" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Interested Residence</label>
+                        <select id="inqProperty">
+                            <option value="The Cove Residences">The Cove Residences (Sector 54)</option>
+                            <option value="Skyline Heights">Skyline Heights (CBD)</option>
+                            <option value="The Emerald Collection">The Emerald Collection (North Park)</option>
+                            <option value="Aura Sky Penthouses">Aura Sky Penthouses (Marina)</option>
+                        </select>
+                    </div>
+                    <div class="inq-field full-width">
+                        <label>Preferred Visit Date & Note</label>
+                        <textarea id="inqNotes" rows="3" placeholder="Tell us about your requirements or preferred time for a visit..."></textarea>
+                    </div>
+                    <div class="inq-field full-width">
+                        <button type="submit" class="btn btn-tour-primary" style="width: 100%;">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Lifestyle & World-Class Amenities | SOBHA SEAS</title>
+    <meta name="description" content="Discover the elevated wellness, clubhouse, leisure facilities, and private parks curated for residents of SOBHA SEAS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page">
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast-popup">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <div class="toast-content">
+            <h5 id="toastTitle">Notification</h5>
+            <p id="toastMessage">Action completed successfully.</p>
+        </div>
+    </div>
+
+    <!-- Mobile Offcanvas Menu Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="brand-logo dark">
+                <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                <span class="brand-text">SOBHA SEAS</span>
+            </a>
+            <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <ul class="drawer-links">
+                <li><a href="index.html" class="drawer-nav-item"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html" class="drawer-nav-item"><i class="fa-solid fa-compass"></i> About Us</a></li>
+                <li><a href="properties.html" class="drawer-nav-item"><i class="fa-solid fa-building"></i> Properties</a></li>
+                <li><a href="lifestyle.html" class="drawer-nav-item active"><i class="fa-solid fa-tree"></i> Lifestyle & Amenities</a></li>
+                <li><a href="contact.html" class="drawer-nav-item"><i class="fa-solid fa-phone"></i> Contact</a></li>
+            </ul>
+            <div class="drawer-footer">
+                <button class="btn btn-drawer-cta open-inquiry-btn">Schedule Private Visit</button>
+                <p class="drawer-contact-line"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            </div>
+        </div>
+    </div>
+    <div id="drawerOverlay" class="drawer-overlay"></div>
+
+    <!-- Header Navigation -->
+    <header id="main-nav" class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                <span class="brand-text">SOBHA SEAS</span>
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="lifestyle.html" class="active">Lifestyle</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn btn-nav open-inquiry-btn">Enquire Now <i class="fa-solid fa-arrow-right"></i></button>
+                <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content-wrapper">
+        <!-- Banner Hero -->
+        <section class="page-banner-hero" style="background-image: url('assets/the_residences.jpg');">
+            <div class="page-banner-overlay"></div>
+            <div class="container page-banner-content" data-reveal="fade-up">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Lifestyle & Amenities</span>
+                </div>
+                <h1 class="page-banner-title">A Symphony of Wellness, Sport & Tranquility</h1>
+                <p class="page-banner-desc">Every element of our community is architected to foster holistic rejuvenation, active recreation, and meaningful shared moments.</p>
+            </div>
+        </section>
+
+        <!-- Lifestyle Pillars Interactive Showcase -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="section-center-head text-center" data-reveal="fade-up">
+                    <span class="sub-label">CURATED EXPERIENCES</span>
+                    <h2 class="section-heading">Designed for Every Facet of Elevated Life</h2>
+                    <p class="section-sub-copy">Immerse yourself into bespoke amenities managed with five-star hospitality standards.</p>
+                </div>
+
+                <div class="lifestyle-detailed-grid" style="margin-top: 55px;">
+                    <!-- Amenity 1 -->
+                    <div class="lifestyle-feature-row" data-reveal="fade-up">
+                        <div class="l-feat-media" style="background-image: url('assets/the_residences.jpg');"></div>
+                        <div class="l-feat-content">
+                            <span class="l-cat-tag">AQUATICS & LEISURE</span>
+                            <h3>Heated Infinity Pools & Hydrotherapy Deck</h3>
+                            <p>Featuring temperature-controlled lap pools, sunken lounge pods, open-air sun decks, and private cabanas serviced by our pool-side café.</p>
+                            <ul class="l-spec-check">
+                                <li><i class="fa-solid fa-circle-check"></i> Olympic 50m temperature-regulated swimming lane</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Separate shaded kids water splash arena</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Hydro-jet bubble massage recliners</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Amenity 2 -->
+                    <div class="lifestyle-feature-row reverse" data-reveal="fade-up">
+                        <div class="l-feat-media" style="background-image: url('assets/fitness_center.jpg');"></div>
+                        <div class="l-feat-content">
+                            <span class="l-cat-tag">FITNESS & LONGEVITY</span>
+                            <h3>High-Altitude Technogym Atrium</h3>
+                            <p>Equipped with intelligent biometric resistance equipment, cross-fit functional cages, pilates reformer machines, and panoramic floor-to-ceiling glass looking onto forest preserves.</p>
+                            <ul class="l-spec-check">
+                                <li><i class="fa-solid fa-circle-check"></i> On-demand resident celebrity personal trainers</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Dedicated cedarwood yoga and sound-bath pavilion</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Cold plunge therapy tubs and dry Finnish saunas</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Amenity 3 -->
+                    <div class="lifestyle-feature-row" data-reveal="fade-up">
+                        <div class="l-feat-media" style="background-image: url('assets/green_spaces.jpg');"></div>
+                        <div class="l-feat-content">
+                            <span class="l-cat-tag">NATURE & BOTANY</span>
+                            <h3>Botanical Sculptured Sanctuaries</h3>
+                            <p>Over 10 acres of dedicated vehicle-free pedestrian parks, aromatic herbs, reflection ponds, and shaded reading gazebos for peaceful morning strolls.</p>
+                            <ul class="l-spec-check">
+                                <li><i class="fa-solid fa-circle-check"></i> 2.5 km cushioned outdoor jogging circuit</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Zen bamboo meditation labyrinth</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Pet-friendly agility grounds and agility runs</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Amenity 4 -->
+                    <div class="lifestyle-feature-row reverse" data-reveal="fade-up">
+                        <div class="l-feat-media" style="background-image: url('assets/community_living.jpg');"></div>
+                        <div class="l-feat-content">
+                            <span class="l-cat-tag">SOCIAL & CUISINE</span>
+                            <h3>Grand Banquet & Private Screening Theatre</h3>
+                            <p>Host exclusive private events in our double-height ballroom, equipped with professional catering kitchens, sommelier wine cellars, and acoustic Dolby Atmos cinema.</p>
+                            <ul class="l-spec-check">
+                                <li><i class="fa-solid fa-circle-check"></i> 24-seater resident 4K private screening lounge</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Cigar lounge and temperature-controlled wine lockers</li>
+                                <li><i class="fa-solid fa-circle-check"></i> Executive coworking business suites & private pods</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Strip -->
+        <section class="container" style="margin-top: 20px; margin-bottom: 65px;" data-reveal="fade-up">
+            <div class="inner-cta-card">
+                <div class="inner-cta-text">
+                    <h2>Experience the Lifestyle First-Hand</h2>
+                    <p>Book a guided clubhouse walk with complimentary valet, champagne reception, and tour of our demonstration suites.</p>
+                </div>
+                <button class="btn btn-dark-pill open-inquiry-btn">
+                    <span>RESERVE VIP TOUR</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-main-grid">
+            <div class="f-brand-col">
+                <div class="footer-logo">
+                    <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                    <span class="brand-text">SOBHA SEAS</span>
+                </div>
+                <span class="brand-subline">RESIDENTIAL DEVELOPERS</span>
+                <p class="brand-description">
+                    Curated residential and commercial spaces designed for timeless living. Quality. Trust. Communities.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="f-links-col">
+                <h4>PAGES</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="properties.html">Our Properties</a></li>
+                    <li><a href="lifestyle.html">Lifestyle Amenities</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="f-links-col">
+                <h4>COLLECTION</h4>
+                <ul>
+                    <li><a href="properties.html">Ready to Move</a></li>
+                    <li><a href="properties.html">Villas & Mansions</a></li>
+                    <li><a href="properties.html">Sky Penthouses</a></li>
+                    <li><a href="contact.html">Brochure Download</a></li>
+                </ul>
+            </div>
+
+            <div class="f-links-col contact-col">
+                <h4>CONTACT</h4>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>A-102, Skyline Blvd, Beverly Hills, California 90210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span><a href="tel:+919876543210">+91 98765 43210</a></span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span><a href="mailto:contact@sobhaseas.com">contact@sobhaseas.com</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom-bar">
+            <p>&copy; 2026 SOBHA SEAS. All Rights Reserved.</p>
+            <div class="f-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <span class="sep">|</span>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+
+        <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Booking & Inquiry Consultation Modal -->
+    <div id="inquiryModal" class="modal-backdrop">
+        <div class="modal-card modal-medium">
+            <button class="modal-close" id="closeInquiryModalBtn" aria-label="Close modal">&times;</button>
+            <div class="inquiry-modal-body">
+                <span class="sub-label">PRIVATE CONCIERGE</span>
+                <h3 class="inquiry-title">Schedule a VIP Consultation</h3>
+                <p class="inquiry-sub">Our senior real estate advisors will provide bespoke property portfolios, floor plans, and preferential investment allocations.</p>
+
+                <form id="inquiryForm" class="inquiry-form-grid">
+                    <div class="inq-field">
+                        <label>Your Full Name *</label>
+                        <input type="text" id="inqName" placeholder="e.g. Alexander Vance" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Email Address *</label>
+                        <input type="email" id="inqEmail" placeholder="e.g. alex@example.com" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Phone / WhatsApp *</label>
+                        <input type="tel" id="inqPhone" placeholder="+91 98765 00000" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Interested Residence</label>
+                        <select id="inqProperty">
+                            <option value="Clubhouse & Lifestyle Inquiry">Clubhouse & Lifestyle Amenities</option>
+                            <option value="The Cove Residences">The Cove Residences (Sector 54)</option>
+                            <option value="Skyline Heights">Skyline Heights (CBD)</option>
+                            <option value="The Emerald Collection">The Emerald Collection (North Park)</option>
+                        </select>
+                    </div>
+                    <div class="inq-field full-width">
+                        <label>Preferred Visit Date & Note</label>
+                        <textarea id="inqNotes" rows="3" placeholder="Tell us about your requirements or preferred time for a visit..."></textarea>
+                    </div>
+                    <div class="inq-field full-width">
+                        <button type="submit" class="btn btn-tour-primary" style="width: 100%;">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

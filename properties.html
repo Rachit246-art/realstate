@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Properties Portfolio | SOBHA SEAS</title>
+    <meta name="description" content="Explore our complete collection of luxury residences, sky penthouses, and private villas.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page">
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast-popup">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <div class="toast-content">
+            <h5 id="toastTitle">Notification</h5>
+            <p id="toastMessage">Action completed successfully.</p>
+        </div>
+    </div>
+
+    <!-- Mobile Offcanvas Menu Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="brand-logo dark">
+                <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                <span class="brand-text">SOBHA SEAS</span>
+            </a>
+            <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <ul class="drawer-links">
+                <li><a href="index.html" class="drawer-nav-item"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html" class="drawer-nav-item"><i class="fa-solid fa-compass"></i> About Us</a></li>
+                <li><a href="properties.html" class="drawer-nav-item active"><i class="fa-solid fa-building"></i> Properties</a></li>
+                <li><a href="lifestyle.html" class="drawer-nav-item"><i class="fa-solid fa-tree"></i> Lifestyle & Amenities</a></li>
+                <li><a href="contact.html" class="drawer-nav-item"><i class="fa-solid fa-phone"></i> Contact</a></li>
+            </ul>
+            <div class="drawer-footer">
+                <button class="btn btn-drawer-cta open-inquiry-btn">Schedule Private Visit</button>
+                <p class="drawer-contact-line"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            </div>
+        </div>
+    </div>
+    <div id="drawerOverlay" class="drawer-overlay"></div>
+
+    <!-- Header Navigation -->
+    <header id="main-nav" class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                <span class="brand-text">SOBHA SEAS</span>
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="properties.html" class="active">Properties</a></li>
+                    <li><a href="lifestyle.html">Lifestyle</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn btn-nav open-inquiry-btn">Enquire Now <i class="fa-solid fa-arrow-right"></i></button>
+                <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content-wrapper">
+        <!-- Inner Page Hero Banner -->
+        <section class="page-banner-hero" style="background-image: url('assets/hero_villa.jpg');">
+            <div class="page-banner-overlay"></div>
+            <div class="container page-banner-content" data-reveal="fade-up">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Our Properties</span>
+                </div>
+                <h1 class="page-banner-title">Exclusive Residences & Estates</h1>
+                <p class="page-banner-desc">Explore award-winning villas, duplex penthouses, and architectural landmarks crafted for those who demand the extraordinary.</p>
+            </div>
+        </section>
+
+        <!-- Search & Filter Controls -->
+        <section class="prop-filter-strip">
+            <div class="container">
+                <div class="inner-filter-card" data-reveal="fade-up">
+                    <div class="filter-search-input">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="propSearchQuery" placeholder="Search by property name, city, or neighborhood...">
+                    </div>
+                    <div class="filter-select-group">
+                        <select id="typeFilter">
+                            <option value="all">All Property Types</option>
+                            <option value="villas">Villas</option>
+                            <option value="penthouse">Penthouses</option>
+                        </select>
+                        <select id="statusFilter">
+                            <option value="all">All Status</option>
+                            <option value="ready">Ready to Move</option>
+                            <option value="construction">Under Construction</option>
+                        </select>
+                        <select id="priceFilter">
+                            <option value="all">Any Price</option>
+                            <option value="low">Under ₹ 5 Cr</option>
+                            <option value="mid">₹ 5 Cr - ₹ 10 Cr</option>
+                            <option value="high">Above ₹ 10 Cr</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Properties Grid Section -->
+        <section class="section-padding" style="padding-top: 45px; padding-bottom: 55px;">
+            <div class="container">
+                <div class="property-grid-header">
+                    <p id="resultsCount">Showing <strong>6 Luxury Residences</strong></p>
+                    <div class="sort-selector">
+                        <span>Sort by:</span>
+                        <select id="sortBySelect">
+                            <option value="featured">Featured First</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="price-desc">Price: High to Low</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="property-cards-grid" id="allPropertiesGrid">
+                    <!-- Property 1 -->
+                    <div class="property-card" data-category="villas ready" data-title="The Cove Residences" data-price="₹ 5.8 Cr*" data-numeric-price="5.8" data-location="Sector 54, Golf Course Road" data-beds="4 Beds" data-baths="4 Baths" data-area="3,500 Sq.Ft" data-img="assets/the_residences.jpg" data-reveal="fade-up">
+                        <div class="card-media">
+                            <div class="card-img" style="background-image: url('assets/the_residences.jpg');"></div>
+                            <span class="status-pill green">READY TO MOVE</span>
+                            <button class="fav-btn" aria-label="Save property"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="prop-title">The Cove Residences</h3>
+                            <p class="prop-address"><i class="fa-solid fa-location-dot"></i> Sector 54, Golf Course Road</p>
+                            <div class="prop-specs">
+                                <span><i class="fa-solid fa-bed"></i> 4 Beds</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-bath"></i> 4 Baths</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-vector-square"></i> 3,500 Sq.Ft</span>
+                            </div>
+                            <div class="prop-footer">
+                                <div class="price-box">
+                                    <span class="price-val">₹ 5.8 Cr*</span>
+                                </div>
+                                <button class="card-action-sq quick-prop-btn" aria-label="View property details"><i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property 2 -->
+                    <div class="property-card" data-category="penthouse construction" data-title="Skyline Heights" data-price="₹ 3.4 Cr*" data-numeric-price="3.4" data-location="Central Avenue, CBD" data-beds="3 Beds" data-baths="3 Baths" data-area="2,400 Sq.Ft" data-img="assets/skyline_towers.jpg" data-reveal="fade-up" data-delay="100">
+                        <div class="card-media">
+                            <div class="card-img" style="background-image: url('assets/skyline_towers.jpg');"></div>
+                            <span class="status-pill orange">UNDER CONSTRUCTION</span>
+                            <button class="fav-btn" aria-label="Save property"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="prop-title">Skyline Heights</h3>
+                            <p class="prop-address"><i class="fa-solid fa-location-dot"></i> Central Avenue, CBD</p>
+                            <div class="prop-specs">
+                                <span><i class="fa-solid fa-bed"></i> 3 Beds</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-bath"></i> 3 Baths</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-vector-square"></i> 2,400 Sq.Ft</span>
+                            </div>
+                            <div class="prop-footer">
+                                <div class="price-box">
+                                    <span class="price-val">₹ 3.4 Cr*</span>
+                                </div>
+                                <button class="card-action-sq quick-prop-btn" aria-label="View property details"><i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property 3 -->
+                    <div class="property-card" data-category="villas ready" data-title="The Emerald Collection" data-price="₹ 9.8 Cr*" data-numeric-price="9.8" data-location="Lakeside Blvd, North Park" data-beds="5 Beds" data-baths="6 Baths" data-area="5,800 Sq.Ft" data-img="assets/the_emerald.jpg" data-reveal="fade-up" data-delay="200">
+                        <div class="card-media">
+                            <div class="card-img" style="background-image: url('assets/the_emerald.jpg');"></div>
+                            <span class="status-pill green">READY TO MOVE</span>
+                            <button class="fav-btn" aria-label="Save property"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="prop-title">The Emerald Collection</h3>
+                            <p class="prop-address"><i class="fa-solid fa-location-dot"></i> Lakeside Blvd, North Park</p>
+                            <div class="prop-specs">
+                                <span><i class="fa-solid fa-bed"></i> 5 Beds</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-bath"></i> 6 Baths</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-vector-square"></i> 5,800 Sq.Ft</span>
+                            </div>
+                            <div class="prop-footer">
+                                <div class="price-box">
+                                    <span class="price-val">₹ 9.8 Cr*</span>
+                                </div>
+                                <button class="card-action-sq quick-prop-btn" aria-label="View property details"><i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property 4 -->
+                    <div class="property-card" data-category="penthouse ready" data-title="Aura Sky Penthouses" data-price="₹ 14.5 Cr*" data-numeric-price="14.5" data-location="Billionaires Row, Marina" data-beds="5 Beds" data-baths="5 Baths" data-area="6,200 Sq.Ft" data-img="assets/sky_villa.jpg" data-reveal="fade-up">
+                        <div class="card-media">
+                            <div class="card-img" style="background-image: url('assets/sky_villa.jpg');"></div>
+                            <span class="status-pill green">READY TO MOVE</span>
+                            <button class="fav-btn" aria-label="Save property"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="prop-title">Aura Sky Penthouses</h3>
+                            <p class="prop-address"><i class="fa-solid fa-location-dot"></i> Billionaires Row, Marina</p>
+                            <div class="prop-specs">
+                                <span><i class="fa-solid fa-bed"></i> 5 Beds</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-bath"></i> 5 Baths</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-vector-square"></i> 6,200 Sq.Ft</span>
+                            </div>
+                            <div class="prop-footer">
+                                <div class="price-box">
+                                    <span class="price-val">₹ 14.5 Cr*</span>
+                                </div>
+                                <button class="card-action-sq quick-prop-btn" aria-label="View property details"><i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property 5 -->
+                    <div class="property-card" data-category="villas construction" data-title="Solarium Meadow Villa" data-price="₹ 7.2 Cr*" data-numeric-price="7.2" data-location="Pine Valley Hills" data-beds="4 Beds" data-baths="4 Baths" data-area="4,200 Sq.Ft" data-img="assets/hero3.png" data-reveal="fade-up" data-delay="100">
+                        <div class="card-media">
+                            <div class="card-img" style="background-image: url('assets/hero3.png');"></div>
+                            <span class="status-pill orange">UNDER CONSTRUCTION</span>
+                            <button class="fav-btn" aria-label="Save property"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="prop-title">Solarium Meadow Villa</h3>
+                            <p class="prop-address"><i class="fa-solid fa-location-dot"></i> Pine Valley Hills</p>
+                            <div class="prop-specs">
+                                <span><i class="fa-solid fa-bed"></i> 4 Beds</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-bath"></i> 4 Baths</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-vector-square"></i> 4,200 Sq.Ft</span>
+                            </div>
+                            <div class="prop-footer">
+                                <div class="price-box">
+                                    <span class="price-val">₹ 7.2 Cr*</span>
+                                </div>
+                                <button class="card-action-sq quick-prop-btn" aria-label="View property details"><i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Property 6 -->
+                    <div class="property-card" data-category="penthouse ready" data-title="Grand Foyer Sky Suite" data-price="₹ 11.2 Cr*" data-numeric-price="11.2" data-location="Kings Promenade, Sector 28" data-beds="4 Beds" data-baths="5 Baths" data-area="4,900 Sq.Ft" data-img="assets/gallery1.png" data-reveal="fade-up" data-delay="200">
+                        <div class="card-media">
+                            <div class="card-img" style="background-image: url('assets/gallery1.png');"></div>
+                            <span class="status-pill green">READY TO MOVE</span>
+                            <button class="fav-btn" aria-label="Save property"><i class="fa-regular fa-heart"></i></button>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="prop-title">Grand Foyer Sky Suite</h3>
+                            <p class="prop-address"><i class="fa-solid fa-location-dot"></i> Kings Promenade, Sector 28</p>
+                            <div class="prop-specs">
+                                <span><i class="fa-solid fa-bed"></i> 4 Beds</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-bath"></i> 5 Baths</span>
+                                <span class="spec-dot">•</span>
+                                <span><i class="fa-solid fa-vector-square"></i> 4,900 Sq.Ft</span>
+                            </div>
+                            <div class="prop-footer">
+                                <div class="price-box">
+                                    <span class="price-val">₹ 11.2 Cr*</span>
+                                </div>
+                                <button class="card-action-sq quick-prop-btn" aria-label="View property details"><i class="fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bespoke Consultation CTA Strip -->
+        <section class="container" style="margin-bottom: 65px;" data-reveal="fade-up">
+            <div class="inner-cta-card">
+                <div class="inner-cta-text">
+                    <h2>Looking for a Bespoke Custom Layout?</h2>
+                    <p>Our private architectural atelier offers personalized custom interior drafting, Italian marble selection, and smart automation consultation.</p>
+                </div>
+                <button class="btn btn-dark-pill open-inquiry-btn">
+                    <span>CONNECT WITH ARCHITECT</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-main-grid">
+            <div class="f-brand-col">
+                <div class="footer-logo">
+                    <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                    <span class="brand-text">SOBHA SEAS</span>
+                </div>
+                <span class="brand-subline">RESIDENTIAL DEVELOPERS</span>
+                <p class="brand-description">
+                    Curated residential and commercial spaces designed for timeless living. Quality. Trust. Communities.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="f-links-col">
+                <h4>PAGES</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="properties.html">Our Properties</a></li>
+                    <li><a href="lifestyle.html">Lifestyle Amenities</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="f-links-col">
+                <h4>COLLECTION</h4>
+                <ul>
+                    <li><a href="properties.html">Ready to Move</a></li>
+                    <li><a href="properties.html">Villas & Mansions</a></li>
+                    <li><a href="properties.html">Sky Penthouses</a></li>
+                    <li><a href="contact.html">Brochure Download</a></li>
+                </ul>
+            </div>
+
+            <div class="f-links-col contact-col">
+                <h4>CONTACT</h4>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>A-102, Skyline Blvd, Beverly Hills, California 90210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span><a href="tel:+919876543210">+91 98765 43210</a></span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span><a href="mailto:contact@sobhaseas.com">contact@sobhaseas.com</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom-bar">
+            <p>&copy; 2026 SOBHA SEAS. All Rights Reserved.</p>
+            <div class="f-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <span class="sep">|</span>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+
+        <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Property Quick View Modal -->
+    <div id="propertyModal" class="modal-backdrop">
+        <div class="modal-card modal-medium">
+            <button class="modal-close" id="closePropertyModalBtn" aria-label="Close modal">&times;</button>
+            <div class="prop-modal-content">
+                <div id="propModalImg" class="prop-modal-media" style="background-image: url('assets/the_residences.jpg');">
+                    <span id="propModalPrice" class="prop-badge-price">₹ 5.8 Cr*</span>
+                </div>
+                <div class="prop-modal-body">
+                    <span class="sub-label">LUXURY SPECIFICATION</span>
+                    <h3 id="propModalTitle">The Cove Residences</h3>
+                    <p id="propModalAddress" class="prop-modal-addr"><i class="fa-solid fa-location-dot"></i> Sector 54, Golf Course Road</p>
+                    
+                    <div class="prop-modal-features">
+                        <div class="p-feat-item">
+                            <i class="fa-solid fa-bed"></i>
+                            <span id="propModalBeds">4 Beds</span>
+                        </div>
+                        <div class="p-feat-item">
+                            <i class="fa-solid fa-bath"></i>
+                            <span id="propModalBaths">4 Baths</span>
+                        </div>
+                        <div class="p-feat-item">
+                            <i class="fa-solid fa-vector-square"></i>
+                            <span id="propModalArea">3,500 Sq.Ft</span>
+                        </div>
+                        <div class="p-feat-item">
+                            <i class="fa-solid fa-parking"></i>
+                            <span>3 Covered Bays</span>
+                        </div>
+                    </div>
+
+                    <p class="prop-modal-desc">
+                        Engineered with Italian marble flooring, soundproof triple-glazed windows, private elevator lobby, and panoramic balconies overlooking scenic green horizons.
+                    </p>
+
+                    <div class="prop-modal-actions">
+                        <button class="btn btn-tour-primary open-inquiry-btn" style="width: 100%;">
+                            <i class="fa-solid fa-calendar-check"></i> Book Private Site Tour
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking & Inquiry Consultation Modal -->
+    <div id="inquiryModal" class="modal-backdrop">
+        <div class="modal-card modal-medium">
+            <button class="modal-close" id="closeInquiryModalBtn" aria-label="Close modal">&times;</button>
+            <div class="inquiry-modal-body">
+                <span class="sub-label">PRIVATE CONCIERGE</span>
+                <h3 class="inquiry-title">Schedule a VIP Consultation</h3>
+                <p class="inquiry-sub">Our senior real estate advisors will provide bespoke property portfolios, floor plans, and preferential investment allocations.</p>
+
+                <form id="inquiryForm" class="inquiry-form-grid">
+                    <div class="inq-field">
+                        <label>Your Full Name *</label>
+                        <input type="text" id="inqName" placeholder="e.g. Alexander Vance" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Email Address *</label>
+                        <input type="email" id="inqEmail" placeholder="e.g. alex@example.com" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Phone / WhatsApp *</label>
+                        <input type="tel" id="inqPhone" placeholder="+91 98765 00000" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Interested Residence</label>
+                        <select id="inqProperty">
+                            <option value="The Cove Residences">The Cove Residences (Sector 54)</option>
+                            <option value="Skyline Heights">Skyline Heights (CBD)</option>
+                            <option value="The Emerald Collection">The Emerald Collection (North Park)</option>
+                            <option value="Aura Sky Penthouses">Aura Sky Penthouses (Marina)</option>
+                            <option value="Solarium Meadow Villa">Solarium Meadow Villa (Pine Valley)</option>
+                            <option value="Grand Foyer Sky Suite">Grand Foyer Sky Suite (Kings Promenade)</option>
+                        </select>
+                    </div>
+                    <div class="inq-field full-width">
+                        <label>Preferred Visit Date & Note</label>
+                        <textarea id="inqNotes" rows="3" placeholder="Tell us about your requirements or preferred time for a visit..."></textarea>
+                    </div>
+                    <div class="inq-field full-width">
+                        <button type="submit" class="btn btn-tour-primary" style="width: 100%;">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Dedicated filter logic for properties page
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('propSearchQuery');
+            const typeFilter = document.getElementById('typeFilter');
+            const statusFilter = document.getElementById('statusFilter');
+            const priceFilter = document.getElementById('priceFilter');
+            const sortBySelect = document.getElementById('sortBySelect');
+            const cards = Array.from(document.querySelectorAll('#allPropertiesGrid .property-card'));
+            const countLabel = document.getElementById('resultsCount');
+
+            function applyFilters() {
+                const query = searchInput ? searchInput.value.toLowerCase() : '';
+                const type = typeFilter ? typeFilter.value : 'all';
+                const status = statusFilter ? statusFilter.value : 'all';
+                const price = priceFilter ? priceFilter.value : 'all';
+
+                let visibleCount = 0;
+
+                cards.forEach(card => {
+                    const title = card.getAttribute('data-title').toLowerCase();
+                    const location = card.getAttribute('data-location').toLowerCase();
+                    const category = card.getAttribute('data-category').toLowerCase();
+                    const numPrice = parseFloat(card.getAttribute('data-numeric-price'));
+
+                    let matchQuery = title.includes(query) || location.includes(query);
+                    let matchType = (type === 'all') || category.includes(type);
+                    let matchStatus = (status === 'all') || category.includes(status);
+                    
+                    let matchPrice = true;
+                    if (price === 'low') matchPrice = numPrice < 5;
+                    else if (price === 'mid') matchPrice = numPrice >= 5 && numPrice <= 10;
+                    else if (price === 'high') matchPrice = numPrice > 10;
+
+                    if (matchQuery && matchType && matchStatus && matchPrice) {
+                        card.style.display = '';
+                        visibleCount++;
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+
+                if (countLabel) {
+                    countLabel.innerHTML = `Showing <strong>${visibleCount} Luxury Residences</strong>`;
+                }
+            }
+
+            if (searchInput) searchInput.addEventListener('input', applyFilters);
+            if (typeFilter) typeFilter.addEventListener('change', applyFilters);
+            if (statusFilter) statusFilter.addEventListener('change', applyFilters);
+            if (priceFilter) priceFilter.addEventListener('change', applyFilters);
+
+            if (sortBySelect) {
+                sortBySelect.addEventListener('change', () => {
+                    const grid = document.getElementById('allPropertiesGrid');
+                    const val = sortBySelect.value;
+                    if (val === 'price-asc') {
+                        cards.sort((a,b) => parseFloat(a.getAttribute('data-numeric-price')) - parseFloat(b.getAttribute('data-numeric-price')));
+                    } else if (val === 'price-desc') {
+                        cards.sort((a,b) => parseFloat(b.getAttribute('data-numeric-price')) - parseFloat(a.getAttribute('data-numeric-price')));
+                    }
+                    cards.forEach(c => grid.appendChild(c));
+                });
+            }
+        });
+    </script>
+</body>
+</html>

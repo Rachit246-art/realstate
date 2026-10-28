@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Contact Us & Sales Gallery | SOBHA SEAS</title>
+    <meta name="description" content="Get in touch with our private concierge and real estate advisory team or book an in-person site visit.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Alex+Brush&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="inner-page">
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast-popup">
+        <i class="fa-solid fa-circle-check toast-icon"></i>
+        <div class="toast-content">
+            <h5 id="toastTitle">Notification</h5>
+            <p id="toastMessage">Action completed successfully.</p>
+        </div>
+    </div>
+
+    <!-- Mobile Offcanvas Menu Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="index.html" class="brand-logo dark">
+                <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                <span class="brand-text">SOBHA SEAS</span>
+            </a>
+            <button id="closeDrawerBtn" class="close-drawer-btn" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <ul class="drawer-links">
+                <li><a href="index.html" class="drawer-nav-item"><i class="fa-solid fa-house"></i> Home</a></li>
+                <li><a href="about.html" class="drawer-nav-item"><i class="fa-solid fa-compass"></i> About Us</a></li>
+                <li><a href="properties.html" class="drawer-nav-item"><i class="fa-solid fa-building"></i> Properties</a></li>
+                <li><a href="lifestyle.html" class="drawer-nav-item"><i class="fa-solid fa-tree"></i> Lifestyle & Amenities</a></li>
+                <li><a href="contact.html" class="drawer-nav-item active"><i class="fa-solid fa-phone"></i> Contact</a></li>
+            </ul>
+            <div class="drawer-footer">
+                <button class="btn btn-drawer-cta open-inquiry-btn">Schedule Private Visit</button>
+                <p class="drawer-contact-line"><i class="fa-solid fa-phone"></i> +91 98765 43210</p>
+            </div>
+        </div>
+    </div>
+    <div id="drawerOverlay" class="drawer-overlay"></div>
+
+    <!-- Header Navigation -->
+    <header id="main-nav" class="navbar scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="brand-logo">
+                <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                <span class="brand-text">SOBHA SEAS</span>
+            </a>
+            <nav class="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="lifestyle.html">Lifestyle</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button class="btn btn-nav open-inquiry-btn">Enquire Now <i class="fa-solid fa-arrow-right"></i></button>
+                <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content-wrapper">
+        <!-- Banner Hero -->
+        <section class="page-banner-hero" style="background-image: url('assets/hero3.png');">
+            <div class="page-banner-overlay"></div>
+            <div class="container page-banner-content" data-reveal="fade-up">
+                <div class="breadcrumbs">
+                    <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span>Contact & Advisory</span>
+                </div>
+                <h1 class="page-banner-title">Begin Your Luxury Journey</h1>
+                <p class="page-banner-desc">Connect with our dedicated relationship managers for personalized consultations, floor plans, and exclusive site visits.</p>
+            </div>
+        </section>
+
+        <!-- Contact Cards & Form Split -->
+        <section class="section-padding" style="padding-top: 55px; padding-bottom: 75px;">
+            <div class="container contact-dual-grid">
+                <!-- Left: Contact Information & Direct Channels -->
+                <div class="contact-info-panel" data-reveal="fade-right">
+                    <span class="sub-label">GET IN TOUCH</span>
+                    <h2 class="section-heading">Experience Exemplary Service</h2>
+                    <p class="contact-panel-desc">
+                        Whether inquiring about an investment, requesting a printed architectural lookbook, or planning a weekend walkthrough, our concierge is at your service 7 days a week.
+                    </p>
+
+                    <div class="contact-cards-list">
+                        <div class="c-info-card">
+                            <div class="c-info-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+                            <div>
+                                <h5>Global Experience Center</h5>
+                                <p>A-102, Skyline Blvd, Beverly Hills, CA 90210</p>
+                                <span class="c-subtext">Open daily: 9:00 AM – 7:30 PM</span>
+                            </div>
+                        </div>
+
+                        <div class="c-info-card">
+                            <div class="c-info-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div>
+                                <h5>Direct VIP Concierge</h5>
+                                <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+                                <span class="c-subtext">Toll Free: 1800-555-SOBHA</span>
+                            </div>
+                        </div>
+
+                        <div class="c-info-card">
+                            <div class="c-info-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div>
+                                <h5>Electronic Inquiries</h5>
+                                <p><a href="mailto:concierge@sobhaseas.com">concierge@sobhaseas.com</a></p>
+                                <span class="c-subtext">Guaranteed response within 2 hours</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: High-End Contact Form -->
+                <div class="contact-form-panel" data-reveal="fade-left">
+                    <div class="contact-form-card">
+                        <h3>Direct Advisory Request</h3>
+                        <p>Fill out the form below and an assigned senior advisor will respond promptly.</p>
+
+                        <form id="contactPageForm" class="contact-page-form">
+                            <div class="form-row-dual">
+                                <div class="form-col">
+                                    <label>First Name *</label>
+                                    <input type="text" id="cpFirstName" placeholder="e.g. David" required>
+                                </div>
+                                <div class="form-col">
+                                    <label>Last Name *</label>
+                                    <input type="text" id="cpLastName" placeholder="e.g. Vance" required>
+                                </div>
+                            </div>
+
+                            <div class="form-row-dual">
+                                <div class="form-col">
+                                    <label>Email Address *</label>
+                                    <input type="email" id="cpEmail" placeholder="e.g. david@vance.com" required>
+                                </div>
+                                <div class="form-col">
+                                    <label>Phone Number *</label>
+                                    <input type="tel" id="cpPhone" placeholder="+91 98765 00000" required>
+                                </div>
+                            </div>
+
+                            <div class="form-col">
+                                <label>Interested Development</label>
+                                <select id="cpProperty">
+                                    <option value="The Cove Residences">The Cove Residences (Sector 54, Golf Course Road)</option>
+                                    <option value="Skyline Heights">Skyline Heights (Central Avenue, CBD)</option>
+                                    <option value="The Emerald Collection">The Emerald Collection (Lakeside Blvd)</option>
+                                    <option value="Aura Sky Penthouses">Aura Sky Penthouses (Marina)</option>
+                                    <option value="General Portfolio">General Portfolio Advisory</option>
+                                </select>
+                            </div>
+
+                            <div class="form-col">
+                                <label>Your Inquiry or Message</label>
+                                <textarea id="cpMessage" rows="4" placeholder="Mention your investment horizons, desired configuration (BHK), or preferred visit dates..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-tour-primary" style="width: 100%; justify-content: center;">
+                                <i class="fa-solid fa-paper-plane"></i> Send Inquiry Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container footer-main-grid">
+            <div class="f-brand-col">
+                <div class="footer-logo">
+                    <span class="brand-symbol"><i class="fa-solid fa-shapes"></i></span>
+                    <span class="brand-text">SOBHA SEAS</span>
+                </div>
+                <span class="brand-subline">RESIDENTIAL DEVELOPERS</span>
+                <p class="brand-description">
+                    Curated residential and commercial spaces designed for timeless living. Quality. Trust. Communities.
+                </p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="f-links-col">
+                <h4>PAGES</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="properties.html">Our Properties</a></li>
+                    <li><a href="lifestyle.html">Lifestyle Amenities</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <div class="f-links-col">
+                <h4>COLLECTION</h4>
+                <ul>
+                    <li><a href="properties.html">Ready to Move</a></li>
+                    <li><a href="properties.html">Villas & Mansions</a></li>
+                    <li><a href="properties.html">Sky Penthouses</a></li>
+                    <li><a href="contact.html">Brochure Download</a></li>
+                </ul>
+            </div>
+
+            <div class="f-links-col contact-col">
+                <h4>CONTACT</h4>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>A-102, Skyline Blvd, Beverly Hills, California 90210</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <span><a href="tel:+919876543210">+91 98765 43210</a></span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <span><a href="mailto:contact@sobhaseas.com">contact@sobhaseas.com</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="container footer-bottom-bar">
+            <p>&copy; 2026 SOBHA SEAS. All Rights Reserved.</p>
+            <div class="f-bottom-links">
+                <a href="#">Privacy Policy</a>
+                <span class="sep">|</span>
+                <a href="#">Terms & Conditions</a>
+            </div>
+        </div>
+
+        <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Booking Modal -->
+    <div id="inquiryModal" class="modal-backdrop">
+        <div class="modal-card modal-medium">
+            <button class="modal-close" id="closeInquiryModalBtn" aria-label="Close modal">&times;</button>
+            <div class="inquiry-modal-body">
+                <span class="sub-label">PRIVATE CONCIERGE</span>
+                <h3 class="inquiry-title">Schedule a VIP Consultation</h3>
+                <p class="inquiry-sub">Our senior real estate advisors will provide bespoke property portfolios, floor plans, and preferential investment allocations.</p>
+
+                <form id="inquiryForm" class="inquiry-form-grid">
+                    <div class="inq-field">
+                        <label>Your Full Name *</label>
+                        <input type="text" id="inqName" placeholder="e.g. Alexander Vance" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Email Address *</label>
+                        <input type="email" id="inqEmail" placeholder="e.g. alex@example.com" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Phone / WhatsApp *</label>
+                        <input type="tel" id="inqPhone" placeholder="+91 98765 00000" required>
+                    </div>
+                    <div class="inq-field">
+                        <label>Interested Residence</label>
+                        <select id="inqProperty">
+                            <option value="The Cove Residences">The Cove Residences (Sector 54)</option>
+                            <option value="Skyline Heights">Skyline Heights (CBD)</option>
+                            <option value="The Emerald Collection">The Emerald Collection (North Park)</option>
+                        </select>
+                    </div>
+                    <div class="inq-field full-width">
+                        <label>Preferred Visit Date & Note</label>
+                        <textarea id="inqNotes" rows="3" placeholder="Tell us about your requirements or preferred time for a visit..."></textarea>
+                    </div>
+                    <div class="inq-field full-width">
+                        <button type="submit" class="btn btn-tour-primary" style="width: 100%;">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cpForm = document.getElementById('contactPageForm');
+            if (cpForm) {
+                cpForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const fName = document.getElementById('cpFirstName').value;
+                    const prop = document.getElementById('cpProperty').value;
+                    cpForm.reset();
+                    showToast('Message Dispatched', `Thank you ${fName}. A dedicated advisor for "${prop}" will contact you shortly.`);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
