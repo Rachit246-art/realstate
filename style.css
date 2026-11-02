@@ -2646,6 +2646,46 @@ body.inner-page .navbar .mobile-menu-btn span {
     color: var(--color-border);
 }
 
+.footer-credit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    color: #94a3b8;
+    font-family: inherit;
+}
+
+.footer-credit .credit-brand {
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.footer-credit .credit-divider {
+    color: rgba(255, 255, 255, 0.28);
+    font-weight: 300;
+    margin: 0 4px;
+}
+
+.footer-credit .credit-text {
+    color: #94a3b8;
+}
+
+.footer-credit .credit-heart {
+    color: #ff3366;
+    display: inline-block;
+    margin: 0 3px;
+    transform: scale(1.05);
+}
+
+.footer-credit .credit-author {
+    color: #ffffff;
+    font-weight: 500;
+}
+
 .scroll-top-btn {
     position: fixed;
     bottom: 30px;
