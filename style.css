@@ -2653,25 +2653,25 @@ body.inner-page .navbar .mobile-menu-btn span {
     gap: 8px;
     font-size: 0.85rem;
     letter-spacing: 0.02em;
-    color: #94a3b8;
+    color: var(--color-text-muted, #6C726D);
     font-family: inherit;
 }
 
 .footer-credit .credit-brand {
     font-weight: 700;
     letter-spacing: 0.08em;
-    color: #ffffff;
+    color: var(--color-dark, #121413);
     text-transform: uppercase;
 }
 
 .footer-credit .credit-divider {
-    color: rgba(255, 255, 255, 0.28);
+    color: #94A3B8;
     font-weight: 300;
     margin: 0 4px;
 }
 
 .footer-credit .credit-text {
-    color: #94a3b8;
+    color: var(--color-text-muted, #6C726D);
 }
 
 .footer-credit .credit-heart {
@@ -2682,8 +2682,8 @@ body.inner-page .navbar .mobile-menu-btn span {
 }
 
 .footer-credit .credit-author {
-    color: #ffffff;
-    font-weight: 500;
+    color: var(--color-dark, #121413);
+    font-weight: 600;
 }
 
 .scroll-top-btn {
